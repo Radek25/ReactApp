@@ -1,9 +1,15 @@
 import React, {FC} from 'react';
+import styled from 'styled-components';
 
-export const TopNav: FC = () => {
+const Content = styled.div`
+    background-color: blue;
+    width: 500px;
+    height: 500px;
+    display: block;
+`;
+
+export const LeftMenu: FC = () => {
     return(
-        <div>
-            Tutaj będzie LeftMenu
-        </div>
-    )
-}
+        <Content>Tutaj będzie LeftMenu</Content>
+    );
+};
