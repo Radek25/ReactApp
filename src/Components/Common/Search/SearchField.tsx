@@ -4,19 +4,26 @@ import styled from 'styled-components';
 import SearchIcon from '../../../icons/search.png';
 
 const Search = styled.div`
-    background-color: red;
-    border: 4px solid black; 
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     input{
         width:90%;
         height: 100%;
-        background-color:green;
         box-sizing: border-box;
+        border: none;
+        text-align: center;
+    }
+    input:hover, input:active, input:focus, input:link{
+        outline: none;
     }
     img{
-        width: 10%;
-        height: 100%;
+        width: 15px;
+        height: 15px;
+        margin: auto;
         box-sizing:border-box;
     }
 `;
@@ -25,7 +32,7 @@ const Search = styled.div`
 export const SearchField: FC = () => {
     return(
         <Search>
-            <input type='text'></input>
+            <input type='text' placeholder="Search Legalcluster"></input>
             <img src={SearchIcon}></img>
         </Search>
     );
