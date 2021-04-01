@@ -26,7 +26,7 @@ const TopNavWrapper = styled.div`
         margin: 0 10px;
         padding: 0;
     }
-    img{
+    .top-nav-right-icons{
         width: 20px;
         height: 20px;
     }
@@ -60,9 +60,9 @@ export const TopNav: FC = () => {
                 <SearchField/>
             </TopNavSearch>
             <TopNavRightIcons>
-                <img src={House}></img>
-                <img src={Message}></img>
-                <img src={Bell}></img>
+                <img className = "top-nav-right-icons" src={House}></img>
+                <img className = "top-nav-right-icons" src={Message}></img>
+                <img className = "top-nav-right-icons" src={Bell}></img>
             </TopNavRightIcons>
         </TopNavWrapper>
     );

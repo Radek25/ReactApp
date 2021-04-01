@@ -20,7 +20,7 @@ const Search = styled.div`
     input:hover, input:active, input:focus, input:link{
         outline: none;
     }
-    img{
+    .search-icon{
         width: 15px;
         height: 15px;
         margin: auto;
@@ -33,7 +33,7 @@ export const SearchField: FC = () => {
     return(
         <Search>
             <input type='text' placeholder="Search Legalcluster"></input>
-            <img src={SearchIcon}></img>
+            <img className="search-icon" src={SearchIcon}></img>
         </Search>
     );
 };

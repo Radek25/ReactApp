@@ -8,6 +8,6 @@ export const Wrapper = styled.div`
     left: 0;
     background-color:grey;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     box-sizing:border-box;
 `;

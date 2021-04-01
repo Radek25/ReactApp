@@ -6,11 +6,12 @@ import {LeftMenu} from '../LeftMenu/LeftMenu';
 import {Wrapper} from '../../StyledHelpers/Components';
 
 
-
 const MainPage: FC = () =>{
     return(
         <Wrapper>
             <TopNav/>
+            <LeftMenu/>
+           
         </Wrapper>
     );
 };
