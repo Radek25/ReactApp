@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    background-color:grey;
+    background-color:#f5f7f9;
     display: flex;
     flex-wrap: wrap;
     box-sizing:border-box;

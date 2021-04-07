@@ -11,7 +11,6 @@ const MainPage: FC = () =>{
         <Wrapper>
             <TopNav/>
             <LeftMenu/>
-           
         </Wrapper>
     );
 };

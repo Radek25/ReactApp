@@ -13,18 +13,17 @@ const Search = styled.div`
     input{
         width:90%;
         height: 100%;
-        box-sizing: border-box;
-        border: none;
         text-align: center;
+        border: none;
+        margin: 0 5px;
     }
     input:hover, input:active, input:focus, input:link{
         outline: none;
     }
     .search-icon{
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         margin: auto;
-        box-sizing:border-box;
     }
 `;
 
@@ -32,8 +31,8 @@ const Search = styled.div`
 export const SearchField: FC = () => {
     return(
         <Search>
-            <input type='text' placeholder="Search Legalcluster"></input>
-            <img className="search-icon" src={SearchIcon}></img>
+            <input type='text' placeholder="Search Legalcluster"/>
+            <img className="search-icon" src={SearchIcon}/>
         </Search>
     );
 };
