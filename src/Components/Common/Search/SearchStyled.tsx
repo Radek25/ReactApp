@@ -1,13 +1,15 @@
-import React, {FC} from 'react';
 import styled from 'styled-components';
+import {Colors} from '../../../StyledHelpers/Colors'
 
-import SearchIcon from '../../../icons/search.png';
-
-const Search = styled.div`
+export const SearchWrapper = styled.div`
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     input{
@@ -26,13 +28,3 @@ const Search = styled.div`
         margin: auto;
     }
 `;
-
-
-export const SearchField: FC = () => {
-    return(
-        <Search>
-            <input type='text' placeholder="Search Legalcluster"/>
-            <img className="search-icon" src={SearchIcon}/>
-        </Search>
-    );
-};
