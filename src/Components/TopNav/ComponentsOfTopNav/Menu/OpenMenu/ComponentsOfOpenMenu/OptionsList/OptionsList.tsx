@@ -10,6 +10,7 @@ import People from '../../../../../../../icons/people.png';
 import Entities from '../../../../../../../icons/entities2.png';
 import Administration from '../../../../../../../icons/administration.png';
 import Corporate from '../../../../../../../icons/entities.png';
+import { Link } from 'react-router-dom';
 
 export const OptionsList: FC = () =>{
     return(
@@ -21,18 +22,22 @@ export const OptionsList: FC = () =>{
                         <img src={Home}></img>
                         <p>Home</p>
                     </li>
+                    <Link to = {'/publications'}>
                     <li>
                         <img src={Publications}></img>
                         <p>Publications</p>
                     </li>
+                    </Link>
                     <li>
                         <img src={People}></img>
                         <p>People</p>
                     </li>
+                    <Link to = {'/entities'}>
                     <li>
                         <img src={Entities}></img>
                         <p>Entities</p>
                     </li>
+                    </Link>
                     <li>
                         <img src={Administration}></img>
                         <p>Administration</p>

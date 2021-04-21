@@ -22,5 +22,3 @@ export const OpenMenu: FC = () =>{
         </OpenMenuWrapper>
     );
 };
-
-//Done

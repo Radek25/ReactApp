@@ -21,7 +21,6 @@ export const ClosedMenu: FC = () =>{
             <p>Home</p>
             <img onClick={()=> ChangeState(IsMenuOpen == true ? IsMenuOpen = false : IsMenuOpen = true)} 
             className="closed-menu-icon-arrow" src={ArrowDownIcon}></img>
-            
             {IsMenuOpen == true ? <OpenMenu/> : null}
         </ClosedMenuWrapper>
     );
