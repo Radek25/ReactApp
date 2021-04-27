@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 
 //Styled Import
 import {ListWrapper} from '../OptionsList/OptionsListStyled';
@@ -12,59 +12,37 @@ import Administration from '../../../../../../../icons/administration.png';
 import Corporate from '../../../../../../../icons/entities.png';
 import { Link } from 'react-router-dom';
 
-export const OptionsList: FC = () =>{
+interface TextFromInput{
+    text : string;
+}
+
+
+export const OptionsList: FC<TextFromInput> = (props) =>{
+    let PlatformArray = [
+    {Index: 1, Icon: Home, Decsription: 'Home', Link: '/home'},
+    {Index: 2, Icon: Publications, Decsription: 'Publication', Link: '/publications'},
+    {Index: 3, Icon: People, Decsription: 'People', Link: '/people'},
+    {Index: 4, Icon: Entities, Decsription: 'Entities', Link: '/entities'},
+    {Index: 5, Icon: Administration, Decsription: 'Administration', Link: '/administration'}];
+
+    let WorkspacesArray = [
+        {Index: 1, Icon: Publications, Decsription: 'Client contract', Link: '/'},
+        {Index: 2, Icon: Publications, Decsription: 'Supplier contract', Link: '/'},
+        {Index: 3, Icon: Corporate, Decsription: 'Corporate', Link: '/'},
+        {Index: 4, Icon: Publications, Decsription: 'Group Norms', Link: '/'},
+        {Index: 5, Icon: Publications, Decsription: 'Real estate contracts', Link: '/'}
+    ];
+
     return(
         <ListWrapper>
             <ul>
                 <li className='title-of-list'>Platform</li>
                 <ul className='platform'>
-                    <li>
-                        <img src={Home}></img>
-                        <p>Home</p>
-                    </li>
-                    <Link to = {'/publications'}>
-                    <li>
-                        <img src={Publications}></img>
-                        <p>Publications</p>
-                    </li>
-                    </Link>
-                    <li>
-                        <img src={People}></img>
-                        <p>People</p>
-                    </li>
-                    <Link to = {'/entities'}>
-                    <li>
-                        <img src={Entities}></img>
-                        <p>Entities</p>
-                    </li>
-                    </Link>
-                    <li>
-                        <img src={Administration}></img>
-                        <p>Administration</p>
-                    </li>
+                    {PlatformArray.filter(Platform => Platform.Decsription.toLowerCase().includes(props.text.toLowerCase())).map(Platform => <Link to = {Platform.Link}><li key={Platform.Index}><img src={Platform.Icon}/><p>{Platform.Decsription}</p></li></Link>)}
                 </ul>
                 <li className='title-of-list'>Workspaces</li>
                 <ul className='workspaces'>
-                    <li>
-                        <img src={Publications}></img> {/*Do zmainy - brak ikony*/}
-                        <p>Client contract</p>
-                    </li>
-                    <li>
-                        <img src={Publications}></img> {/*Do zmainy - brak ikony*/}
-                        <p>Supplier contract</p>
-                    </li>
-                    <li>
-                        <img src={Corporate}></img>
-                        <p>Corporate</p>
-                    </li>
-                    <li>
-                        <img src={Publications}></img> {/*Do zmainy - brak ikony*/}
-                        <p>Group Norms</p>
-                    </li>
-                    <li>
-                        <img src={Publications}></img> {/*Do zmainy - brak ikony*/}
-                        <p>Real estate contracts</p>
-                    </li>
+                {WorkspacesArray.filter(Workspaces => Workspaces.Decsription.toLowerCase().includes(props.text.toLowerCase())).map(Workspaces => <li key={Workspaces.Index}><img src={Workspaces.Icon}/><p>{Workspaces.Decsription}</p></li>)}
                 </ul>
             </ul>
     </ListWrapper>

@@ -18,7 +18,7 @@ export const YourLinksWrapper = styled.div`
     }
     p{
         padding: 5px;
-        font-size: 0.7rem;
+        font-size: 13px;
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
     }

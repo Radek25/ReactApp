@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 
 //Styled Import
 import {OpenMenuWrapper} from '../OpenMenu/OpenMenuStyled';
@@ -10,13 +10,16 @@ import {OptionsList} from '../OpenMenu/ComponentsOfOpenMenu/OptionsList/OptionsL
 import {Account} from '../OpenMenu/ComponentsOfOpenMenu/Account/Account';
 import {Logout} from './ComponentsOfOpenMenu/Logout/Logout';
 
-export const OpenMenu: FC = () =>{
+export const OpenMenu: FC = (props) =>{//rodzic
+    const [text, addText] = useState('');
+
+    console.log(text);
     return(
         <OpenMenuWrapper>
             <FilterField>
-                <FilterInput/>
+                <FilterInput addText={addText}/>
             </FilterField>
-            <OptionsList/>
+            <OptionsList text={text}/>
             <Account/>
             <Logout/>
         </OpenMenuWrapper>

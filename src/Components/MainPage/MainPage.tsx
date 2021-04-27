@@ -10,6 +10,7 @@ import { RightContent } from '../RightContent/RightContent'
 import { Wrapper } from "../../StyledHelpers/Components";
 import { Test } from "../RightContent/TestWebside/TestWebside";
 import { Entities } from '../RightContent/EntitiesWebside/EntitiesWebside'
+import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
 
 const MainPage: FC = () => {
   return (
@@ -19,9 +20,10 @@ const MainPage: FC = () => {
         <LeftMenu />
         <RightContent>
           <Switch>
-            <Route path="/publications" component={Test}/>
-            <Route path="/ecosystem" component={Test} />
-            <Route path="/entities" component={Entities}/>
+            <Route path='/home' component={HomeWebside}/>
+            <Route path='/publications' component={Test}/>
+            <Route path='/ecosystem' component={Test} />
+            <Route path='/entities' component={Entities}/>
           </Switch>
         </RightContent>
       </Wrapper>

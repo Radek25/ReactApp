@@ -21,7 +21,7 @@ export const PersonWrapper = styled.div`
         color: ${Colors.NameAndSurname};
     }
     .job-title{
-        font-size: 10px;
+        font-size: 11px;
         margin-top: 5px;
         color: ${Colors.JobSubtitle};
     }

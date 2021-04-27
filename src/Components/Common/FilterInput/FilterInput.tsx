@@ -1,7 +1,16 @@
-import React, {FC} from 'react';
-
-export const FilterInput: FC = () =>{
+import React, {FC, useState} from 'react';
+interface FilterProps{
+    addText : (text : string) => void;
+}
+export const FilterInput: FC<FilterProps> = (props) =>{
     return(
-        <input type='text' placeholder='Filter...'></input>
+        <input type='text' placeholder='Filter...' onChange={(e) =>props.addText(e.target.value)}/>
     );
 };
+
+
+// export const FilterInput: FC<FilterProps> = ({addText}) =>{ //destrukturyzacja obiektu
+//     return(
+//         <input type='text' placeholder='Filter...' onChange={(e) =>props.addText(e.target.value)}/>
+//     );
+// };

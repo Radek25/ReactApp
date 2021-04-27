@@ -15,7 +15,7 @@ height: 60%;
         height: 18px;
     }
     p{
-        font-size: 12px;
+        font-size: 13px;
         margin-left: 15px;
         font-family: 'Roboto', sans-serif;
         font-weight: 600;

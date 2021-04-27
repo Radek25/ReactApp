@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
 export const Colors = {
+    background: '#f5f7f9',
     white: '#FFFFFF',
     black: '#111111',
     grey: '#808080',
