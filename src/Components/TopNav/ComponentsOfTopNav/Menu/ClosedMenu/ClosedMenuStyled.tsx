@@ -15,11 +15,16 @@ export const ClosedMenuWrapper = styled.div`
         width: 18px;
         height: 18px;
     }
-    .closed-menu-icon-arrow{
+    .closed-menu-icon-arrow, .closed-menu-icon-cross{
         width: 8px;
         height: 7px;
         position: absolute;
         right: 0;
+    }
+    .closed-menu-icon-cross{
+        width: 15px;
+        height: 15px;
+        right: 7px;
     }
     p{
         font-family: 'Roboto', sans-serif;

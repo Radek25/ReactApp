@@ -10,7 +10,7 @@ import {OptionsList} from '../OpenMenu/ComponentsOfOpenMenu/OptionsList/OptionsL
 import {Account} from '../OpenMenu/ComponentsOfOpenMenu/Account/Account';
 import {Logout} from './ComponentsOfOpenMenu/Logout/Logout';
 
-export const OpenMenu: FC = (props) =>{//rodzic
+export const OpenMenu: FC = (props) =>{
     const [text, addText] = useState('');
 
     console.log(text);

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {Colors} from '../../../../StyledHelpers/Colors';
 
 export const LatestPublicationsWrapper = styled.div`
+    height: 280px;
     display: flex;
     background-color: ${Colors.white};
     border-radius: 5px;
