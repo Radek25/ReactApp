@@ -21,6 +21,7 @@ export const Tile = styled.div`
     height: 200px;
     border-radius: 10px;
     background-color: ${Colors.white};
+    box-shadow: 0px 0px 5px 0px rgba(209,209,209,1);
     position: absolute;
     z-index: -1;
     left: 0;
@@ -48,6 +49,7 @@ export const Tile = styled.div`
     }
     .icon-and-title-of-tile p{
         font-size: 15px;
+        font-weight: 900;
         margin: 0;
         padding: 5px;
     }
@@ -55,9 +57,9 @@ export const Tile = styled.div`
     .description-to-tile{
         width: 80%;
         height: 20px;
+        margin-left: 10px;
         display: flex;
-        flex-direction: row;
-        background-color: red;
+        align-items: center;
     }
     .description-to-tile p{
         font-size: 13px;
@@ -65,12 +67,21 @@ export const Tile = styled.div`
         align-items: center;
         margin: 0 auto;
         padding: 0;
+        color: ${Colors.grey};
     }
-    .description-to-tile img{
+    .description-icon{
         margin: 0 auto;
+        width: 15px;
+        height: 15px;
     }
     .dot-spaces{
         width: 4px;
         height: 4px;
+        margin: 0 10px;
+    }
+    .update-info{
+        font-size: 10px;
+        margin: 8px 0 0 10px;
+        color: ${Colors.grey};
     }
 `;

@@ -6,12 +6,14 @@ import {HomeWebsideWrapper} from './HomeWebsideStyled';
 //Components Import
 import {LatestPublications} from './LatestPublications/LatestPublications';
 import {Workspaces} from './Workspaces/Workspaces';
+import {ResumeYourWork} from './ResumeYourWork/ResumeYourWork';
 
 export const HomeWebside: FC = () =>{
     return(
         <HomeWebsideWrapper>
             <LatestPublications/>
             <Workspaces/>
+            <ResumeYourWork/>
         </HomeWebsideWrapper>
     );
 };

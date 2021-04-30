@@ -15,4 +15,7 @@ export const MainPublicationWrapper = styled.div`
     color: ${Colors.white};
     font-weight: 500;
     border-radius: 5px 0 0 5px;
+    .date, .name-and-surname{
+        color: ${Colors.white};
+    }
 `;
