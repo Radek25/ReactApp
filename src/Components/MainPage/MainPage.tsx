@@ -1,5 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 
+import {useDispatch} from 'react-redux';
+ 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import styled from "styled-components";
@@ -12,7 +14,17 @@ import { Test } from "../RightContent/TestWebside/TestWebside";
 import { Entities } from '../RightContent/EntitiesWebside/EntitiesWebside'
 import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
 
+import { getUsers } from '../../tools/actions/actionsTypes/usersActions';
+
+type GetUsers = ReturnType<typeof getUsers>
+
 const MainPage: FC = () => {
+
+  const dispatch = useDispatch();
+  useEffect(()=> {
+    dispatch<GetUsers>(getUsers());
+  }, []);
+
   return (
     <Router>
       <Wrapper>

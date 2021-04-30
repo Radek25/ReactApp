@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "src/index.tsx"  ]
+, "src/StyledHelpers/tools/index.tsx", "react-app-env.d.ts"  ]
 }
