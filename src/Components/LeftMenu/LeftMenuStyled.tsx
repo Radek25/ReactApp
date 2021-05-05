@@ -7,6 +7,7 @@ export const LeftMenuWrapper = styled.div`
         box-sizing: border-box;
     }
     width: 18%;
+    min-width: 230px;
     height: 100%;
     margin-top: 10px;
     display: flex;

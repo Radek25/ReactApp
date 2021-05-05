@@ -1,14 +1,15 @@
-import { GET_POST, IPostTypes } from './../actions/actionsTypes/postTypes';
-import { ISinglePost } from './../InterfacesOfAPIData/post';
+import { GET_POST, IPostTypes } from '../actions/actionsTypes/postTypes';
+import { ISinglePost } from '../InterfacesOfAPIData/post';
 import { ISingleUser } from "../InterfacesOfAPIData/user";
 import * as actionTypes from "../actions/actionsTypes/userTypes";
+import { ISinglePicture } from '../InterfacesOfAPIData/picture';
 
-export interface IUserReducer {
+export interface IDataFromAPI {
   CurrentUser: ISingleUser | null;
-  CurrentPost: ISinglePost[] | null
+  CurrentPost: ISinglePost[] | null;
 }
 
-const defaultState = (): IUserReducer => ({
+const defaultState = (): IDataFromAPI => ({
   CurrentUser: null,
   CurrentPost: null
 });

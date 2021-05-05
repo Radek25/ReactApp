@@ -7,14 +7,12 @@ export const DatePhotoNameWrapper = styled.div`
         padding: 0;
         box-sizing: border-box;
     }
-    width: 170px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     img{
         width: 20px;
         height: 20px;
+        margin: 0 10px;
         border-radius: 50px;
     }
     p{

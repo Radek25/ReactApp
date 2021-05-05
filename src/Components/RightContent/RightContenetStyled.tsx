@@ -8,6 +8,7 @@ export const RightContentWrapper = styled.div`
         box-sizing: border-box;
     }
     width: 77%;
+    min-width: 900px;
     margin-top: 20px;
     display: flex;
     justify-content: center;

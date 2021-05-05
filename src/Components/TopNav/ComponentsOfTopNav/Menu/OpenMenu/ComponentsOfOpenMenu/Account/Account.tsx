@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 //Data Import
 import { useSelector } from "react-redux";
 import { IState } from "../../../../../../../tools/reducers";
-import { IUserReducer } from "../../../../../../../tools/reducers/userReducers";
+import { IDataFromAPI } from '../../../../../../../tools/reducers/DataFromAPIReducers';
 
 //Styled Import
 import {AccountWrapper} from '../Account/AccountStyled';
@@ -13,8 +13,8 @@ import Privacy from '../../../../../../../icons/privacy.png';
 import Settings from '../../../../../../../icons/settings.png';
 
 export const Account: FC = () =>{
-    const { CurrentUser } = useSelector<IState, IUserReducer>((globalState) => ({
-        ...globalState.user,
+    const { CurrentUser } = useSelector<IState, IDataFromAPI>((globalState) => ({
+        ...globalState.DataFromAPI,
       }));
     return(
         <AccountWrapper>

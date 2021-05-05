@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, {FC, useEffect} from 'react'
 
 //Icons Import
 import WritingPerson from '../../../../../icons/writeperson.jpg';
@@ -7,18 +7,19 @@ import {LastPublicationWrapper} from './LastPublicationStyled';
 //Components Import
 import {DatePhotoName} from '../../../../Common/DatePhotoName/DatePhotoName';
 import { ISinglePost } from '../../../../../tools/InterfacesOfAPIData/post';
+import { ISinglePicture } from './../../../../../tools/InterfacesOfAPIData/picture';
 
-interface PostData{
+interface IPostData{
     post: ISinglePost;
 }
 
-export const LastPublication: FC<PostData> = (props) =>{
+export const LastPublication: FC<IPostData> = (props) =>{
     return(
         <LastPublicationWrapper>
-            <img className = 'writing-person' src = {WritingPerson}/>
+            <img className = 'writing-person' src = {props.post.picturePost.url}/>
             <div className = 'content-of-publication'>
-                <p className = 'note-content'>{props.post.title}</p>
-                <DatePhotoName/>
+                <p className = 'note-content'>{(props.post.body).charAt(0).toUpperCase() + props.post.body.slice(1, 130)} . . .</p>
+                <DatePhotoName post = {props.post}/>
             </div>
         </LastPublicationWrapper>
     );

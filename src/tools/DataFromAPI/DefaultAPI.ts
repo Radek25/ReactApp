@@ -19,26 +19,35 @@ export const getUserPictures = async (id: number) => {
 };
 
 export const getCurrentPost = async (UserId: number, PostCount: number) =>{
-    return fetch(`https://jsonplaceholder.typicode.com/posts?userId=${UserId}`)
+    return fetch(`https://jsonplaceholder.typicode.com/posts`)
         .then(response => response.json())
         .then((post: ISinglePost[]) => {
-            return post.slice(0, PostCount);
+            return post.filter(post => post.id == 11 || post.id == 21 || post.id == 31 || post.id == 41)
         })
 }
 
-export const getUsers = async (PostCount: number) =>{
+export const getUsersToPost = async (PostCount: number) =>{
     return fetch(`https://jsonplaceholder.typicode.com/users`)
         .then(response => response.json())
         .then((users: ISingleUser[]) => {
-            return users.slice(0, PostCount);
+            return users.slice(1, PostCount+1);
         })
 }
 
-export const getPhotos = async (PhotoId: number, PhotoCount: number) =>{
+export const getPhotosToPost = async (PhotoId: number, PhotoCount: number) =>{
     return fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${PhotoId}`)
         .then(response => response.json())
         .then((photo: ISinglePicture[]) => {
-            return photo.slice(0, PhotoCount);
+            return photo.slice(1, PhotoCount+1);
         })
 }
+
+export const getPicturesToPost = async (PhotoId: number) =>{
+    return fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${PhotoId}`)
+        .then(response => response.json())
+        .then((pictures: ISinglePicture[]) => {
+            return pictures;
+        })
+}
+
 

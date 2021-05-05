@@ -1,17 +1,21 @@
 import React, {FC} from 'react'
 
-//PhotoImport
-import Photo from '../../../icons/WorkPort.jpg';
-
 //Styled Import
 import {DatePhotoNameWrapper} from './DatePhotoNameStyled';
 
-export const DatePhotoName: FC = () =>{
+import { ISinglePost } from '../../../tools/InterfacesOfAPIData/post';
+
+interface IPostData{
+    post: ISinglePost;
+}
+
+
+export const DatePhotoName: FC<IPostData> = (props) =>{
     return(
         <DatePhotoNameWrapper>
-            <p className = 'date'>7 jan. 2020</p>
-            <img src = {Photo}/>
-            <p className = 'name-and-surname'>Huberta Swift</p>
+            <p className = 'date'>{Math.floor(Math.random() * 20) + 1} jan. 2020</p>
+            <img src = {props.post.photoPost?.url}/>
+            <p className = 'name-and-surname'>{props.post.userPost?.name}</p>
         </DatePhotoNameWrapper>
     );
 };

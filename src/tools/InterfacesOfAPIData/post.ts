@@ -5,7 +5,8 @@ export interface ISinglePost{
     userId: number;
     id: number;
     title: string;
-    body: string
+    body: string;
     userPost?: ISingleUser;
-    photoPost?: ISinglePicture
+    photoPost?: ISinglePicture;
+    picturePost: ISinglePicture;
 }

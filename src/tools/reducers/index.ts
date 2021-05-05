@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import user, {IUserReducer} from './userReducers';
+import DataFromAPI, {IDataFromAPI} from './DataFromAPIReducers';
 export default combineReducers({
-    user,
+    DataFromAPI,
 })
 
 export interface IState{
-    user: IUserReducer;
+    DataFromAPI: IDataFromAPI;
 }

@@ -13,9 +13,8 @@ export const LastPublicationWrapper = styled.div`
     }
     .content-of-publication{
         width: 90%;
-        height: 80px;
+        height: 75px;
         padding: 5px;
-        margin: 5px 0;
     }
     .note-content{
         font-weight: 600;

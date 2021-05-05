@@ -17,7 +17,7 @@ export const LatestPublicationsWrapper = styled.div`
         color: ${Colors.black};
     }
     .see-more-subtitle{
-        margin-top: 5px;
+        margin-top: 15px;
         margin-left: 2px;
         font-size: 13px;
         color: ${Colors.lightblue};

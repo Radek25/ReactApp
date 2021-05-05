@@ -3,25 +3,24 @@ import React, { FC } from "react";
 //Data Import
 import { useSelector } from "react-redux";
 import { IState } from "../../../../tools/reducers";
-import { IUserReducer } from "../../../../tools/reducers/userReducers";
+import { IDataFromAPI } from '../../../../tools/reducers/DataFromAPIReducers';
 
 //Icon Import
-import WorkerPicture from "../../../../icons/WorkPort.jpg";
+import UnknownUser from "../../../../icons/question-circle.png";
 
 //StyledImport
 import { PersonWrapper } from "../Person/PerswonStyled";
 
 export const Person: FC = () => {
-  const { CurrentUser } = useSelector<IState, IUserReducer>((globalState) => ({
-    ...globalState.user,
+  const { CurrentUser } = useSelector<IState, IDataFromAPI>((globalState) => ({
+    ...globalState.DataFromAPI,
   }));
 
   return (
     <PersonWrapper>
-      {/* {console.log(picturesList)} */}
-      <img src={!CurrentUser? WorkerPicture : CurrentUser.photo?.url}></img>
+      <img src={!CurrentUser? UnknownUser : CurrentUser.photo?.url}></img>
       <p className="name-and-surname">
-        {!CurrentUser ? "und" : CurrentUser.name}
+        {!CurrentUser ? "No user" : CurrentUser.name}
       </p>
       <p className="job-title">Job Title - Company</p>
     </PersonWrapper>
