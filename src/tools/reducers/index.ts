@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 
-import users, {IUsersReducer} from './usersReducers';
-
+import user, {IUserReducer} from './userReducers';
 export default combineReducers({
-    users
+    user,
 })
 
 export interface IState{
-    users: IUsersReducer;
+    user: IUserReducer;
 }

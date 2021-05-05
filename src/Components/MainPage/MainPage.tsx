@@ -4,7 +4,6 @@ import {useDispatch} from 'react-redux';
  
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import styled from "styled-components";
 
 import { TopNav } from "../TopNav/TopNav";
 import { LeftMenu } from "../LeftMenu/LeftMenu";
@@ -14,15 +13,15 @@ import { Test } from "../RightContent/TestWebside/TestWebside";
 import { Entities } from '../RightContent/EntitiesWebside/EntitiesWebside'
 import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
 
-import { getUsers } from '../../tools/actions/actionsTypes/usersActions';
+import { getUser } from '../../tools/actions/actionsTypes/userActions';
 
-type GetUsers = ReturnType<typeof getUsers>
+type GetUsers = ReturnType<typeof getUser>
 
 const MainPage: FC = () => {
 
   const dispatch = useDispatch();
   useEffect(()=> {
-    dispatch<GetUsers>(getUsers());
+    dispatch<GetUsers>(getUser());
   }, []);
 
   return (

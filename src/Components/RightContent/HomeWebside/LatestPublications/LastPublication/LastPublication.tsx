@@ -6,13 +6,18 @@ import WritingPerson from '../../../../../icons/writeperson.jpg';
 import {LastPublicationWrapper} from './LastPublicationStyled';
 //Components Import
 import {DatePhotoName} from '../../../../Common/DatePhotoName/DatePhotoName';
+import { ISinglePost } from '../../../../../tools/InterfacesOfAPIData/post';
 
-export const LastPublication: FC = () =>{
+interface PostData{
+    post: ISinglePost;
+}
+
+export const LastPublication: FC<PostData> = (props) =>{
     return(
         <LastPublicationWrapper>
             <img className = 'writing-person' src = {WritingPerson}/>
             <div className = 'content-of-publication'>
-                <p className = 'note-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aut voluptatibus ipsam ullam commodi. Ipsa aut voluptatibus ipsam.</p>
+                <p className = 'note-content'>{props.post.title}</p>
                 <DatePhotoName/>
             </div>
         </LastPublicationWrapper>

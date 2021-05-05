@@ -5,12 +5,16 @@ import {MainPublicationWrapper} from './MainPublicationStyled';
 
 //Components Import
 import {DatePhotoName} from '../../../../Common/DatePhotoName/DatePhotoName';
-import styled from 'styled-components';
 
-export const MainPublication: FC = () =>{
+import { ISinglePost } from '../../../../../tools/InterfacesOfAPIData/post';
+interface PostData{
+    post: ISinglePost;
+}
+
+export const MainPublication: FC<PostData> = (props) =>{
     return(
         <MainPublicationWrapper>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit provident quo.Lorem ipsum dolor provident quo.</p>
+            <p>{props.post.title}</p>
             <DatePhotoName/>
         </MainPublicationWrapper>
     );

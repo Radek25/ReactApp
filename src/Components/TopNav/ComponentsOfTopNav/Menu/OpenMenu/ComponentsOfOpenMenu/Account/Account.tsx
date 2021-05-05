@@ -1,23 +1,30 @@
 import React, {FC} from 'react';
 
+//Data Import
+import { useSelector } from "react-redux";
+import { IState } from "../../../../../../../tools/reducers";
+import { IUserReducer } from "../../../../../../../tools/reducers/userReducers";
+
 //Styled Import
 import {AccountWrapper} from '../Account/AccountStyled';
 
 //Icon Import
-import WorkerPicture from '../../../../../../../icons/WorkPort.jpg';
 import Privacy from '../../../../../../../icons/privacy.png';
 import Settings from '../../../../../../../icons/settings.png';
 
 export const Account: FC = () =>{
+    const { CurrentUser } = useSelector<IState, IUserReducer>((globalState) => ({
+        ...globalState.user,
+      }));
     return(
         <AccountWrapper>
             <ul>
                 <li className='title-of-list'>Account</li>
                 <ul>
                     <li className='micro-profile'>
-                        <img src={WorkerPicture}/>
+                        <img src={CurrentUser?.photo?.url}/>
                         <div>
-                            <p className='name'>Joenne-Maria de Cruso</p>
+                            <p className='name'>{CurrentUser?.name}</p>
                             <p className='see-profile'>See profile</p>
                         </div>
                     </li>

@@ -1,17 +1,29 @@
-import React, {FC} from 'react';
+import React, { FC } from "react";
+
+//Data Import
+import { useSelector } from "react-redux";
+import { IState } from "../../../../tools/reducers";
+import { IUserReducer } from "../../../../tools/reducers/userReducers";
 
 //Icon Import
-import WorkerPicture from '../../../../icons/WorkPort.jpg';
+import WorkerPicture from "../../../../icons/WorkPort.jpg";
 
 //StyledImport
-import {PersonWrapper} from '../Person/PerswonStyled';
+import { PersonWrapper } from "../Person/PerswonStyled";
 
 export const Person: FC = () => {
-    return(
-        <PersonWrapper>
-            <img src={WorkerPicture}></img>
-            <p className='name-and-surname'>Huberta Swift</p>
-            <p className='job-title'>Job Title - Company</p>
-        </PersonWrapper>
-    );
+  const { CurrentUser } = useSelector<IState, IUserReducer>((globalState) => ({
+    ...globalState.user,
+  }));
+
+  return (
+    <PersonWrapper>
+      {/* {console.log(picturesList)} */}
+      <img src={!CurrentUser? WorkerPicture : CurrentUser.photo?.url}></img>
+      <p className="name-and-surname">
+        {!CurrentUser ? "und" : CurrentUser.name}
+      </p>
+      <p className="job-title">Job Title - Company</p>
+    </PersonWrapper>
+  );
 };

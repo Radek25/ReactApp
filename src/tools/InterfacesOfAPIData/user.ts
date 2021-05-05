@@ -1,3 +1,5 @@
+import { ISinglePicture } from "./picture";
+
 export interface ISingleUser{
     id: number;
     name: string;
@@ -20,4 +22,5 @@ export interface ISingleUser{
         catchPhrase: string;
         bs: string;
     }
+    photo?:  ISinglePicture;
 };
