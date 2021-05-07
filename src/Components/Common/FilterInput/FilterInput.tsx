@@ -7,10 +7,3 @@ export const FilterInput: FC<FilterProps> = (props) =>{
         <input type='text' placeholder='Filter...' onChange={(e) =>props.addText(e.target.value)}/>
     );
 };
-
-
-// export const FilterInput: FC<FilterProps> = ({addText}) =>{ //destrukturyzacja obiektu
-//     return(
-//         <input type='text' placeholder='Filter...' onChange={(e) =>props.addText(e.target.value)}/>
-//     );
-// };

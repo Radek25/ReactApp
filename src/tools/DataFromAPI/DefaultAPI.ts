@@ -1,6 +1,7 @@
 import { ISingleUser } from './../InterfacesOfAPIData/user';
 import { ISinglePicture } from './../InterfacesOfAPIData/picture';
 import {ISinglePost} from '../InterfacesOfAPIData/post';
+import { ISingleComment } from './../InterfacesOfAPIData/comment';
 
 export const getCurrentUser = async (id: number) => {
     return fetch(`https://jsonplaceholder.typicode.com/users?id=${id}`)
@@ -50,4 +51,19 @@ export const getPicturesToPost = async (PhotoId: number) =>{
         })
 }
 
+export const getCurrentComment = async () => {
+    return fetch(`https://jsonplaceholder.typicode.com/comments`)
+    .then(response => response.json())
+    .then((comments: ISingleComment[]) => {
+        return comments;
+    })
+}
+
+export const getUsersToComment = async () =>{
+    return fetch(`https://jsonplaceholder.typicode.com/users`)
+        .then(response => response.json())
+        .then((users: ISingleUser[]) => {
+            return users;
+        })
+}
 

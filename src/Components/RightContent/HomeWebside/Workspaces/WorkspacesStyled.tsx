@@ -4,7 +4,7 @@ import {Colors} from '../../../../StyledHelpers/Colors';
 export const WorkspacesWrapper = styled.div`
     width: 105%;
     height: 250px;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     position: relative;
     p{
         font-size: 20px;

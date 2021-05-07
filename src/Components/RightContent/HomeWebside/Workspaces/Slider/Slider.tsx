@@ -10,7 +10,6 @@ import BackgroundWritePerson from '../../../../../icons/writeperson2.jpg';
 import BackgroundConferenceRoom from '../../../../../icons/conference-room.jpg';
 import BackgroundBuilding from '../../../../../icons/building.jpg';
 import BackgroundHandShake from '../../../../../icons/handshake.jpg';
-import BackgroundDocuments from '../../../../../icons/company-document.jpg';
 import BackgroundLibrary from '../../../../../icons/library.jpg';
 import Dot from '../../../../../icons/circle-solid.png';
 import FileSignature from '../../../../../icons/file-signature.png';

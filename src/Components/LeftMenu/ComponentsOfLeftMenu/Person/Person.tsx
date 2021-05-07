@@ -22,7 +22,7 @@ export const Person: FC = () => {
       <p className="name-and-surname">
         {!CurrentUser ? "No user" : CurrentUser.name}
       </p>
-      <p className="job-title">Job Title - Company</p>
+      <p className="job-title">{CurrentUser?.company.name}</p>
     </PersonWrapper>
   );
 };
