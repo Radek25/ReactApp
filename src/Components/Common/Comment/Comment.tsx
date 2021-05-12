@@ -15,6 +15,7 @@ import Publication from '../../../icons/publications.png';
 interface IComment{
     comment: ISingleComment;
 }
+
 export const Comment: FC<IComment> = (props) =>{
 
     let CommentSubtitleArray = [
@@ -27,9 +28,11 @@ export const Comment: FC<IComment> = (props) =>{
         {Icon : Entities, Title: 'Institutions'},
         {Icon : Person, Title: 'Business meeting'}
     ];
+
     let index : number = Math.floor(Math.random() * 7) + 1  ;
     let title: string = props.comment.name;
     let body : string = props.comment.body;
+
     return(
         <CommentWrapper>
             <h4>{title.charAt(0).toUpperCase() + title.slice(1)}</h4>

@@ -11,6 +11,7 @@ import {AccountWrapper} from '../Account/AccountStyled';
 //Icon Import
 import Privacy from '../../../../../../../icons/privacy.png';
 import Settings from '../../../../../../../icons/settings.png';
+import { Link } from 'react-router-dom';
 
 export const Account: FC = () =>{
     const { CurrentUser } = useSelector<IState, IDataFromAPI>((globalState) => ({
@@ -25,7 +26,7 @@ export const Account: FC = () =>{
                         <img src={CurrentUser?.photo?.url}/>
                         <div>
                             <p className='name'>{CurrentUser?.name}</p>
-                            <p className='see-profile'>See profile</p>
+                            <Link to='/profile'><p className='see-profile'>See profile</p></Link>
                         </div>
                     </li>
                     <li>

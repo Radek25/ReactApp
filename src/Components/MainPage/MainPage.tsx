@@ -12,6 +12,7 @@ import { Wrapper } from "../../StyledHelpers/Components";
 import { Test } from "../RightContent/TestWebside/TestWebside";
 import { Entities } from '../RightContent/EntitiesWebside/EntitiesWebside'
 import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
+import { ProfileWebside } from "../RightContent/ProfileWebside/ProfileWebside";
 
 import { getUser } from '../../tools/actions/actionsTypes/userActions';
 
@@ -32,6 +33,7 @@ const MainPage: FC = () => {
         <RightContent>
           <Switch>
             <Route path='/home' component={HomeWebside}/>
+            <Route path='/profile' component={ProfileWebside}/>
             <Route path='/publications' component={Test}/>
             <Route path='/ecosystem' component={Test} />
             <Route path='/entities' component={Entities}/>
