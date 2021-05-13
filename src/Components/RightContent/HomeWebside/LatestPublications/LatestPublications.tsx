@@ -1,5 +1,4 @@
-import React, {FC, useEffect} from 'react'
-import {useDispatch} from 'react-redux';
+import React, {FC} from 'react'
 
 //Data Import
 import { useSelector } from "react-redux";
@@ -14,15 +13,7 @@ import {AllLastPublication} from './LatestPublicationsStyled';
 import {LastPublication} from './LastPublication/LastPublication';
 import {MainPublication} from './MainPublication/MainPublication';
 
-import { getPost } from '../../../../tools/actions/actionsTypes/postActions';
-
-type GetPosts = ReturnType<typeof getPost>
-
 export const LatestPublications: FC = () =>{
-    const dispatch = useDispatch();
-    useEffect(()=> {
-    dispatch<GetPosts>(getPost());
-    }, []);
 
     const { CurrentPost } = useSelector<IState, IDataFromAPI>((globalState) => ({
         ...globalState.DataFromAPI,

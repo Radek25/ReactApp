@@ -9,4 +9,11 @@ export const ProfileWebsideWrapper = styled.div`
     }
     width: 100%;
     background-color: white;
+    .edit-pen{
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 `;

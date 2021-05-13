@@ -12,6 +12,7 @@ import UnknownUser from "../../../../icons/question-circle.png";
 import { PersonWrapper } from "../Person/PerswonStyled";
 import { Link } from "react-router-dom";
 
+
 export const Person: FC = () => {
   const { CurrentUser } = useSelector<IState, IDataFromAPI>((globalState) => ({
     ...globalState.DataFromAPI,

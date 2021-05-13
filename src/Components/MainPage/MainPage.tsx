@@ -15,14 +15,20 @@ import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
 import { ProfileWebside } from "../RightContent/ProfileWebside/ProfileWebside";
 
 import { getUser } from '../../tools/actions/actionsTypes/userActions';
+import { getPost } from "../../tools/actions/actionsTypes/postActions";
+import { getComment } from "../../tools/actions/actionsTypes/commentAction";
 
 type GetUsers = ReturnType<typeof getUser>
+type GetPosts = ReturnType<typeof getPost>
+type GetComment = ReturnType<typeof getComment>
 
 const MainPage: FC = () => {
 
   const dispatch = useDispatch();
   useEffect(()=> {
     dispatch<GetUsers>(getUser());
+    dispatch<GetPosts>(getPost());
+    dispatch<GetComment>(getComment());
   }, []);
 
   return (

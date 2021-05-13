@@ -11,4 +11,5 @@ export const Colors = {
     NameAndSurname: '#4053a7',
     JobSubtitle: '#a2a5aa',
     TopOptions: '#353d56',
+    BackgroundToProfilSkills: '#e6f0f3',
 }

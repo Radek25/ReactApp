@@ -1,5 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
-import {useDispatch} from 'react-redux';
+import React, {FC, useState} from 'react';
   
 //Pagination Import
 import { makeStyles, createStyles } from '@material-ui/core/styles';
@@ -20,11 +19,6 @@ import {ResumeYourWorkWrapper} from './ResumeYourWorkStyled';
 import {Comment} from '../../../Common/Comment/Comment'
 import { FilterInput } from '../../../Common/FilterInput/FilterInput';
 
-import { getComment} from '../../../../tools/actions/actionsTypes/commentAction';
-import { ISingleComment } from './../../../../tools/InterfacesOfAPIData/comment';
-
-type GetComment = ReturnType<typeof getComment>
-
 //Pagination Styles
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -39,10 +33,6 @@ const useStyles = makeStyles((theme) =>
 
 export const ResumeYourWork: FC = () =>{
 
-  const dispatch = useDispatch();
-  useEffect(()=> {
-    dispatch<GetComment>(getComment());
-  }, []);
   const { CurrentComment } = useSelector<IState, IDataFromAPI>((globalState) => ({
     ...globalState.DataFromAPI,
   }));
