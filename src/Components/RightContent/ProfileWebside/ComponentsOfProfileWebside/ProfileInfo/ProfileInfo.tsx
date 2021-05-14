@@ -25,7 +25,6 @@ export const ProfileInfo: FC = () => {
     let [partner, setPartner] = useState('Partner');
       
     let [isEdit, showEdit] = useState(false);
-    console.log(CurrentUser?.name);
     return(
         <ProfileInfoWrapper>
             <img className = 'edit-pen' src = {(isEdit == false? Pen : Check)} 
@@ -38,7 +37,7 @@ export const ProfileInfo: FC = () => {
             </div>
             <div className = 'info-of-userProfil'>
                 {isEdit == false? (
-                    <ul>
+                    <ul className = 'list-of-data'>
                         <li>{name}</li>
                         <li>{company}</li>
                         <li>{city}</li>
@@ -56,7 +55,7 @@ export const ProfileInfo: FC = () => {
             </div>
             <div className = 'email-and-phone'>
                 {isEdit == false? (
-                    <ul>
+                    <ul className = 'list-of-data-email-phone'>
                         <li>{CurrentUser?.email}</li>
                         <li>+33 (0)6 12 34 56 78</li>
                     </ul>

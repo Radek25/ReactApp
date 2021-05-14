@@ -7,8 +7,6 @@ import {LastPublicationWrapper} from './LastPublicationStyled';
 //Components Import
 import {DatePhotoName} from '../../../../Common/DatePhotoName/DatePhotoName';
 import { ISinglePost } from '../../../../../tools/InterfacesOfAPIData/post';
-import { ISinglePicture } from './../../../../../tools/InterfacesOfAPIData/picture';
-
 interface IPostData{
     post: ISinglePost;
 }

@@ -35,20 +35,20 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
                 onClick={() => {showEdit(isEdit == false ? isEdit = true : isEdit = false)}}>
             </img>
             <div className = 'expertise'>
-                <p className = 'title'>Expertise</p>
+                <h2>Expertise</h2>
                 {isEdit == false?
-                <p className = 'value'>{expertiseValue}</p>:
+                <p>{expertiseValue}</p>:
                 <select onChange = {e => setExpertiseValue(e.target.value)}>
                     {ExpertiseArray.map(ExpertiseArray => <option>{ExpertiseArray}</option>)}
                 </select>
                 }
                 </div>
                 <div className = 'specialties'>
-                <p className = 'title'>Specialities</p>
+                <h2>Specialities</h2>
                 {isEdit == false?
                 <div>
-                    <p className = 'value'>{specialtiesValue}</p>
-                    <p className = 'value'>{specialtiesValue2}</p>
+                    <p>{specialtiesValue}</p>
+                    <p>{specialtiesValue2}</p>
                 </div>
                 :
                 <div>
@@ -62,11 +62,11 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
                 }
                 </div>
                 <div className = 'admission-to-practice-law'>
-                <p className = 'title'>Admission to practice law</p>
+                <h2>Admission to practice law</h2>
                 {isEdit == false?
                 <div>
-                    <p className = 'value'>{admissionValue}</p>
-                    <p className = 'value'>{admissionValue2}</p>
+                    <p>{admissionValue}</p>
+                    <p>{admissionValue2}</p>
                 </div>
                 :
                 <div>
@@ -80,9 +80,9 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
                 }
                 </div>
                 <div className = 'countries'>
-                <p className = 'title'>Countries</p>
+                <h2>Countries</h2>
                 {isEdit == false?
-                <p className = 'value'>{countryValue}</p>:
+                <p>{countryValue}</p>:
                 <select onChange = {e => setCountryValue(e.target.value)}>
                     {CountrysArray.map(CountrysArray => <option>{CountrysArray}</option>)}
                 </select>

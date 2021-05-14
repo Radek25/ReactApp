@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Colors} from '../../../StyledHelpers/Colors'
 
 export const ProfileWebsideWrapper = styled.div`
     *{
@@ -8,7 +9,7 @@ export const ProfileWebsideWrapper = styled.div`
         font-family: 'Roboto', sans-serif;
     }
     width: 100%;
-    background-color: white;
+    background-color: ${Colors.white};
     .edit-pen{
         width: 15px;
         height: 15px;
