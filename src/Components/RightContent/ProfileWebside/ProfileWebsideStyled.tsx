@@ -9,6 +9,9 @@ export const ProfileWebsideWrapper = styled.div`
         font-family: 'Roboto', sans-serif;
     }
     width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(209,209,209,1);
     background-color: ${Colors.white};
     .edit-pen{
         width: 15px;

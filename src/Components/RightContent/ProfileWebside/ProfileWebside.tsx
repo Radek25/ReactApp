@@ -8,6 +8,9 @@ import { TopOptions } from './ComponentsOfProfileWebside/TopOptions/TopOptions';
 import { ProfileInfo} from './ComponentsOfProfileWebside/ProfileInfo/ProfileInfo';
 import { SkillsInfo } from './ComponentsOfProfileWebside/SkillsInfo/SkillsInfo';
 import {PanelInfo} from './ComponentsOfProfileWebside/PanelInfo/PanelInfo'
+import { Proposals } from './Proposals/Proposals';
+import { InternalReviews } from './ComponentsOfProfileWebside/InternalReviews/InternalReviews';
+import { AmountOfFees } from './ComponentsOfProfileWebside/AmountOfFees/AmountOfFees';
 
 export const ProfileWebside: FC = () =>{
 
@@ -19,11 +22,9 @@ export const ProfileWebside: FC = () =>{
             <ProfileInfo/>
             <SkillsInfo setEditValue={setEditValue}/>
             <PanelInfo isOpen={valueOfEdit}/>
-            {/* <ServiseProjects/>
-            <InternalCorrespondants/>
-            <Proposals/>
-            <InternalPeviews/>
-            <AmountOfFees/> */}
+            <Proposals isOpen={valueOfEdit}/>
+            <InternalReviews isOpen={valueOfEdit}/>
+            <AmountOfFees isOpen={valueOfEdit}/>
         </ProfileWebsideWrapper>
     );
 };
