@@ -67,3 +67,10 @@ export const getUsersToComment = async () =>{
         })
 }
 
+export const getCurrentPhoto= async () =>{
+    return fetch(`https://jsonplaceholder.typicode.com/photos`)
+        .then(response => response.json())
+        .then((photos: ISinglePicture[]) => {
+            return (photos.slice(50, 170));
+        })
+}

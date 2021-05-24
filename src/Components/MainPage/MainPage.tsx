@@ -17,10 +17,12 @@ import { ProfileWebside } from "../RightContent/ProfileWebside/ProfileWebside";
 import { getUser } from '../../tools/actions/actionsTypes/userActions';
 import { getPost } from "../../tools/actions/actionsTypes/postActions";
 import { getComment } from "../../tools/actions/actionsTypes/commentAction";
+import { getPhoto } from './../../tools/actions/actionsTypes/photoAction';
 
 type GetUsers = ReturnType<typeof getUser>
 type GetPosts = ReturnType<typeof getPost>
 type GetComment = ReturnType<typeof getComment>
+type GetPhoto = ReturnType<typeof getPhoto>
 
 const MainPage: FC = () => {
 
@@ -29,6 +31,7 @@ const MainPage: FC = () => {
     dispatch<GetUsers>(getUser());
     dispatch<GetPosts>(getPost());
     dispatch<GetComment>(getComment());
+    dispatch<GetPhoto>(getPhoto());
   }, []);
 
   return (

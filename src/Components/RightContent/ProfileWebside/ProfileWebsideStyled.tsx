@@ -8,7 +8,7 @@ export const ProfileWebsideWrapper = styled.div`
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
     }
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px rgba(209,209,209,1);

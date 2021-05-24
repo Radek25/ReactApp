@@ -13,7 +13,6 @@ interface UserData{
 }
 
 export const CorrespondantProfile: FC<UserData> = (props) => {
-    console.log(props.userPhoto);
     return(
         <CorrespondantProfileWrapper>
                 <img src={props.userPhoto}/>

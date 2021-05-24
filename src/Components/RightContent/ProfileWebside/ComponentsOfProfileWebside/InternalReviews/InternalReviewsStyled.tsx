@@ -37,5 +37,6 @@ export const InternalReviewsWrapper = styled.div`
         border: 1px solid ${Colors.lightgrey};
         outline: none;
         border-radius: 5px;
+        padding-left: 5px;
     }
 `;

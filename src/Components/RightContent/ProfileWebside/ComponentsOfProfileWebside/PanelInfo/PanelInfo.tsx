@@ -39,7 +39,6 @@ export const PanelInfo: FC<ValueEdit> = (props) => {
            <h2>Services &amp; projects</h2>
            {props.isOpen == false? <p>{services}</p> : <input className = 'services-input' type='text' placeholder={services} onChange={(e)=>setServices(e.target.value)}/>}
            <h2>International correspondents</h2>
-           {console.log(CurrentPost)}
            {CurrentPost?.slice(0,2).map(CurrentPost => <CorrespondantProfile userName={CurrentPost.userPost?.name != undefined? CurrentPost.userPost.name : 'No user'} userPhoto={CurrentPost.picturePost.url != undefined? CurrentPost.picturePost.url : 'No photo'}/>)}
         </PanelInfoWrapper>
     )

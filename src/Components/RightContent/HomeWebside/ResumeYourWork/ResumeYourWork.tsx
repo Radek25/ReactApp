@@ -100,8 +100,6 @@ export const ResumeYourWork: FC = () =>{
                 )
               )
             }
-            {console.log(allComents?.length)}
-            {console.log(oneUser?.length)}
         </ResumeYourWorkWrapper>
     )
 }
