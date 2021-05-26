@@ -15,6 +15,7 @@ import Pagination from '@material-ui/lab/Pagination';
 //Component Import
 import {Entitie} from '../../Common/Entitie/Entitie';
 import { OptionPanel } from './OptionPanel/OptionPanel';
+import { FilterPanel } from './FilterPanel/FilterPanel';
 
 //Icons Import
 import Setting from '../../../icons/cog.png';
@@ -47,6 +48,7 @@ export const Entities: FC = () => {
     let sizeOfPagination = (CurrentPhoto?.length? CurrentPhoto.length/24 : 5)
 
     let[isMosaic, setValueOfView] = useState(true);
+    let[isFilterOpen, setFilter] = useState(false);
     return(
         <EntitiesWrapper value={isMosaic}>
             <div className = 'top'>
@@ -56,7 +58,8 @@ export const Entities: FC = () => {
                     <div onClick={() => setValueOfView(true)} id='button-first'><img src={isMosaic==true? MosaicBlue : MosaicGrey}/> Mosaic</div>
                     <div onClick={() => setValueOfView(false)} id='button-second'><img src={isMosaic==true? ListGrey : ListBlue}/>List</div>
                 </div>
-            <OptionPanel/>
+            <OptionPanel setFilter={setFilter}/>
+            {isFilterOpen == true? <FilterPanel/> : null}
             </div>
             {CurrentPhoto?.slice(24*(page-1), 24*page).map(CurrentPhoto => <Entitie sizeOfEntity = {isMosaic} photoUrl = {CurrentPhoto.url}/>)}
             <div id = 'pagination-wrapper' className = {classes.root}>

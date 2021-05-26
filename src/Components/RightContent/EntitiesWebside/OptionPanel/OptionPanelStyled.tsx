@@ -67,6 +67,7 @@ export const OptionPanelWrapper = styled.div`
     .sort-option, .filter-option{
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
     .view-option{
         width: 18px;

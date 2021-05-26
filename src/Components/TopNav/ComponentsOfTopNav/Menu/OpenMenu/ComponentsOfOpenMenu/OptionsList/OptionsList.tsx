@@ -12,6 +12,8 @@ import Administration from '../../../../../../../icons/administration.png';
 import Corporate from '../../../../../../../icons/entities.png';
 import { Link } from 'react-router-dom';
 
+import { WorkspacesArray } from './../../../../../../RightContent/HomeWebside/Workspaces/Slider/Slider';
+
 interface TextFromInput{
     text : string;
 }
@@ -25,13 +27,6 @@ export const OptionsList: FC<TextFromInput> = (props) =>{
     {Index: 4, Icon: Entities, Decsription: 'Entities', Link: '/entities'},
     {Index: 5, Icon: Administration, Decsription: 'Administration', Link: '/administration'}];
 
-    let WorkspacesArray = [
-        {Index: 1, Icon: Publications, Decsription: 'Client contract', Link: '/'},
-        {Index: 2, Icon: Publications, Decsription: 'Supplier contract', Link: '/'},
-        {Index: 3, Icon: Corporate, Decsription: 'Corporate', Link: '/'},
-        {Index: 4, Icon: Publications, Decsription: 'Group Norms', Link: '/'},
-        {Index: 5, Icon: Publications, Decsription: 'Real estate contracts', Link: '/'}
-    ];
 
     return(
         <ListWrapper>
@@ -42,7 +37,7 @@ export const OptionsList: FC<TextFromInput> = (props) =>{
                 </ul>
                 <li className='title-of-list'>Workspaces</li>
                 <ul className='workspaces'>
-                {WorkspacesArray.filter(Workspaces => Workspaces.Decsription.toLowerCase().includes(props.text.toLowerCase())).map(Workspaces => <li key={Workspaces.Index}><img src={Workspaces.Icon}/><p>{Workspaces.Decsription}</p></li>)}
+                {WorkspacesArray.filter(Workspaces => Workspaces.TitleOfTile.toLowerCase().includes(props.text.toLowerCase())).map(Workspaces => <Link to = {`/workspace/${Workspaces.Id}`}><li key={Workspaces.Id}><img src={Workspaces.MainIcon}/><p>{Workspaces.TitleOfTile}</p></li></Link>)}
                 </ul>
             </ul>
     </ListWrapper>

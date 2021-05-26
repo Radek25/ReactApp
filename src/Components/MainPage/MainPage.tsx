@@ -13,6 +13,7 @@ import { Test } from "../RightContent/TestWebside/TestWebside";
 import { Entities } from '../RightContent/EntitiesWebside/EntitiesWebside'
 import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
 import { ProfileWebside } from "../RightContent/ProfileWebside/ProfileWebside";
+import { WorkspacesWebside } from './../RightContent/WorkspacesWebside/WorkspacesWebside';
 
 import { getUser } from '../../tools/actions/actionsTypes/userActions';
 import { getPost } from "../../tools/actions/actionsTypes/postActions";
@@ -46,6 +47,7 @@ const MainPage: FC = () => {
             <Route path='/publications' component={Test}/>
             <Route path='/ecosystem' component={Test} />
             <Route path='/entities' component={Entities}/>
+            <Route path='/workspace/:id' component={WorkspacesWebside}/>
           </Switch>
         </RightContent>
       </Wrapper>

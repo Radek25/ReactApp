@@ -9,7 +9,6 @@ interface IEntitieData{
 }
 
 export const Entitie: FC<IEntitieData> = (props) =>{
-    console.log(`${props.sizeOfEntity}`)
     return(
         <EntitieWrapper value={props.sizeOfEntity}>
             <img src={props.photoUrl}/>

@@ -13,9 +13,15 @@ import Min from '../../../../icons/min-arrow.png';
 import Share from '../../../../icons/share-arrow.png';
 import { FilterInput } from './../../../Common/FilterInput/FilterInput';
 
-export const OptionPanel: FC = () => {
+interface IsFilterOpen{
+    setFilter: (isOpen: boolean) => void;
+}
+
+export const OptionPanel: FC<IsFilterOpen> = (props) => {
 
     const [text, addText] = useState('');
+    let [isFilterOpen, setFilterOpen] = useState(false);
+    props.setFilter(isFilterOpen);
 
     return(
         <OptionPanelWrapper>
@@ -27,7 +33,7 @@ export const OptionPanel: FC = () => {
             <img className='three-dots' src={ThreeDots}/>
             <div className = 'filter-options'>
                 <div className='sort-option'><img src={SortArrow}/>Sort</div>
-                <div className='filter-option'><img src={Filter}/>Filters</div>
+                <div onClick={() => (isFilterOpen == false? setFilterOpen(true) : setFilterOpen(false))} className='filter-option'><img src={Filter}/>Filters</div>
             </div>
             <img className='view-option' src={Max}/>
             <div className='share-option'><img src={Share}/>Share</div>

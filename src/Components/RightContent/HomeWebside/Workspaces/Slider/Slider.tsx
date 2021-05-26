@@ -19,18 +19,18 @@ import Person from '../../../../../icons/person.png';
 import Publication from '../../../../../icons/publications.png';
 import People from '../../../../../icons/user-friends.png';
 
-export const WorkspacesSlider: FC = () =>{
+export let WorkspacesArray = [
+    {Id: 1, BackgroundImg : BackgroundWritePerson, MainIcon : FileSignature, TitleOfTile: 'Client contract', Description : 'Contract', UpdateNumber : '2'},
+    {Id: 2, BackgroundImg : BackgroundWritePerson, MainIcon : FileSignature, TitleOfTile: 'Supplier contract', Description : 'Contract', UpdateNumber : '4'},
+    {Id: 3, BackgroundImg : BackgroundConferenceRoom, MainIcon : Entities, TitleOfTile: 'Corporate', Description : 'Corporate', UpdateNumber : '3'},
+    {Id: 4, BackgroundImg : BackgroundLibrary, MainIcon : Book, TitleOfTile: 'Group norms', Description : 'Norms', UpdateNumber : '6'},
+    {Id: 5, BackgroundImg : BackgroundHandShake, MainIcon : Person, TitleOfTile: 'Customers', Description : 'Customers', UpdateNumber : '1'},
+    {Id: 6, BackgroundImg : BackgroundLibrary, MainIcon : Publication, TitleOfTile: 'Documents', Description : 'Documents', UpdateNumber : '2'},
+    {Id: 7, BackgroundImg : BackgroundBuilding, MainIcon : Entities, TitleOfTile: 'Institutions', Description : 'Institutions', UpdateNumber : '2'},
+    {Id: 8, BackgroundImg : BackgroundConferenceRoom, MainIcon : Person, TitleOfTile: 'Business meeting', Description : 'Meeting', UpdateNumber : '3'}
+];
 
-    let WorkspacesArray = [
-        {BackgroundImg : BackgroundWritePerson, MainIcon : FileSignature, TitleOfTile: 'Client contract', Description : 'Contract', UpdateNumber : '2'},
-        {BackgroundImg : BackgroundWritePerson, MainIcon : FileSignature, TitleOfTile: 'Supplier contract', Description : 'Contract', UpdateNumber : '4'},
-        {BackgroundImg : BackgroundConferenceRoom, MainIcon : Entities, TitleOfTile: 'Corporate', Description : 'Corporate', UpdateNumber : '3'},
-        {BackgroundImg : BackgroundLibrary, MainIcon : Book, TitleOfTile: 'Group norms', Description : 'Norms', UpdateNumber : '6'},
-        {BackgroundImg : BackgroundHandShake, MainIcon : Person, TitleOfTile: 'Customers', Description : 'Customers', UpdateNumber : '1'},
-        {BackgroundImg : BackgroundLibrary, MainIcon : Publication, TitleOfTile: 'Documents', Description : 'Documents', UpdateNumber : '2'},
-        {BackgroundImg : BackgroundBuilding, MainIcon : Entities, TitleOfTile: 'Institutions', Description : 'Institutions', UpdateNumber : '2'},
-        {BackgroundImg : BackgroundConferenceRoom, MainIcon : Person, TitleOfTile: 'Business meeting', Description : 'Meeting', UpdateNumber : '3'}
-    ];
+export const WorkspacesSlider: FC = () =>{
 
     const settings = {
         dots: false,
