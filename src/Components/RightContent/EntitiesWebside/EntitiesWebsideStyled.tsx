@@ -3,17 +3,25 @@ import { Colors } from './../../../StyledHelpers/Colors';
 
 interface BoolenOfEntity{
     value: boolean;
+    fullScreen: boolean;
 }
 
 export const EntitiesWrapper = styled.div<BoolenOfEntity>`
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    position: ${props => (props.fullScreen == true? 'absolute' : 'none')};
+    z-index: ${props => (props.fullScreen == true? '2' : 'auto')};
+    top: ${props => (props.fullScreen == true? '0' : 'auto')};
+    left:${props => (props.fullScreen == true? '0' : 'auto')};
+    background-color: ${Colors.white}; 
     .top{
         width: 95%;
-        margin: 0 0 10px 0;
+        margin: 0 0 20px 0;
         .title-and-view-option{
             height: 30px;
             display: flex;
@@ -61,5 +69,10 @@ export const EntitiesWrapper = styled.div<BoolenOfEntity>`
                 background-color: ${props => (props.value == true? `${Colors.white}` : `${Colors.BackgroundToProfilSkills}`)};
             }
         }
+    }
+    #pagination-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 `;

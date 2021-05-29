@@ -54,6 +54,7 @@ export const OptionPanelWrapper = styled.div`
         margin: 0 15px;
         width: 16px;
         height: 15px;
+        cursor: pointer;
     }
     .filter-options{
         width: 140px;
@@ -73,22 +74,23 @@ export const OptionPanelWrapper = styled.div`
         width: 18px;
         height: 18px;
         margin: 0 10px;
+        cursor: pointer;
     }
     .share-option{
         display: flex;
         align-items: center;
         border-left: 1px solid ${Colors.grey};
         padding: 4px 10px;
+        cursor: pointer;
     }
     .right-side-of-optional-panel{
-        width: 35%;
+        width: 350px;
         padding: 0 10px;
         position: absolute;
         right: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* background-color: green; */
         input{
             height: 25px;
             border-radius: 5px;

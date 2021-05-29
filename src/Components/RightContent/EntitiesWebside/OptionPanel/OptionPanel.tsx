@@ -14,14 +14,26 @@ import Share from '../../../../icons/share-arrow.png';
 import { FilterInput } from './../../../Common/FilterInput/FilterInput';
 
 interface IsFilterOpen{
+    addText: (text: string) => void;
     setFilter: (isOpen: boolean) => void;
+    setSort: (isSort: boolean) => void;
+    setFullScreen: (isSort: boolean) => void;
 }
 
 export const OptionPanel: FC<IsFilterOpen> = (props) => {
 
     const [text, addText] = useState('');
-    let [isFilterOpen, setFilterOpen] = useState(false);
+    props.addText(text);
+    const [isFilterOpen, setFilterOpen] = useState(false);
     props.setFilter(isFilterOpen);
+    const [isSortClick, setSortClick] = useState(false)
+    props.setSort(isSortClick);
+    const [isFullScreenOpen, setFullScreenOpen] = useState(false)
+    props.setFullScreen(isFullScreenOpen);
+
+    function copyToClipboard(link: string) {
+        navigator.clipboard.writeText(link);
+    }
 
     return(
         <OptionPanelWrapper>
@@ -32,11 +44,11 @@ export const OptionPanel: FC<IsFilterOpen> = (props) => {
             <img className='arrow-down' src={ArrowDown}/>
             <img className='three-dots' src={ThreeDots}/>
             <div className = 'filter-options'>
-                <div className='sort-option'><img src={SortArrow}/>Sort</div>
+                <div onClick={() => (isSortClick == false? setSortClick(true) : setSortClick(false))} className='sort-option'><img src={SortArrow}/>Sort</div>
                 <div onClick={() => (isFilterOpen == false? setFilterOpen(true) : setFilterOpen(false))} className='filter-option'><img src={Filter}/>Filters</div>
             </div>
-            <img className='view-option' src={Max}/>
-            <div className='share-option'><img src={Share}/>Share</div>
+            <img onClick={() => (isFullScreenOpen == false? setFullScreenOpen(true) : setFullScreenOpen(false))} className='view-option' src={isFullScreenOpen == false? Max : Min}/>
+            <div onClick={() => copyToClipboard(window.location.href)} className='share-option'><img src={Share}/>Share</div>
             <div className='right-side-of-optional-panel'>
                 <FilterInput addText = {addText}/>
                 <select>

@@ -3,6 +3,7 @@ import {Colors} from './Colors';
 
 export const Wrapper = styled.div`
     width: 100%;
+    margin-bottom: 0;
     background-color:#f5f7f9;
     display: flex;
     flex-wrap: wrap;

@@ -47,10 +47,25 @@ export const Entities: FC = () => {
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => setPage(value);
     let sizeOfPagination = (CurrentPhoto?.length? CurrentPhoto.length/24 : 5)
 
-    let[isMosaic, setValueOfView] = useState(true);
-    let[isFilterOpen, setFilter] = useState(false);
+    const[isMosaic, setValueOfView] = useState(true);
+    const[isFilterOpen, setFilter] = useState(false);
+    const[isSort, setSort] = useState(false);
+    const[isFullScreen, setFullScreen] = useState(false);
+    const [text, addText] = useState('');
+  
+     const allTitles = CurrentPhoto?.map(CurrentPhoto => CurrentPhoto.title).sort();
+     const allPhotos = CurrentPhoto?.map(CurrentPhoto => CurrentPhoto.url);
+
+     let ArrayPhotosAdnsSortTitles =[];
+     for (let index = 0; index < 120; index++) {
+       ArrayPhotosAdnsSortTitles.push({Title: allTitles?.[index], Photo: allPhotos?.[index]});
+     }
+
+     const noSortArray = CurrentPhoto?.filter(CurrentPhoto => CurrentPhoto.title.toLowerCase().includes(text.toLowerCase())).slice(24*(page-1), 24*page).map(CurrentPhoto => <Entitie title={CurrentPhoto.title} photos={CurrentPhoto.url} sizeOfEntity = {isMosaic}/>);
+     const sortArray = ArrayPhotosAdnsSortTitles?.filter(ArrayPhotosAdnsSortTitles => ArrayPhotosAdnsSortTitles.Title?.toLowerCase().includes(text.toLowerCase())).slice(24*(page-1), 24*page).map(Photo => <Entitie title={Photo.Title} photos={Photo.Photo} sizeOfEntity = {isMosaic}/>);
+
     return(
-        <EntitiesWrapper value={isMosaic}>
+        <EntitiesWrapper value={isMosaic} fullScreen={isFullScreen}>
             <div className = 'top'>
                 <div className='title-and-view-option'>
                     <h1>Entities</h1>
@@ -58,10 +73,10 @@ export const Entities: FC = () => {
                     <div onClick={() => setValueOfView(true)} id='button-first'><img src={isMosaic==true? MosaicBlue : MosaicGrey}/> Mosaic</div>
                     <div onClick={() => setValueOfView(false)} id='button-second'><img src={isMosaic==true? ListGrey : ListBlue}/>List</div>
                 </div>
-            <OptionPanel setFilter={setFilter}/>
+            <OptionPanel addText={addText} setFilter={setFilter} setSort={setSort} setFullScreen={setFullScreen}/>
             {isFilterOpen == true? <FilterPanel/> : null}
             </div>
-            {CurrentPhoto?.slice(24*(page-1), 24*page).map(CurrentPhoto => <Entitie sizeOfEntity = {isMosaic} photoUrl = {CurrentPhoto.url}/>)}
+            {(sortArray.length == 0 || noSortArray?.length == 0)? <div>No results!</div>: (isSort == false? noSortArray : sortArray)}
             <div id = 'pagination-wrapper' className = {classes.root}>
                 <Pagination count={sizeOfPagination} page={page} onChange={handleChange}/>
             </div>

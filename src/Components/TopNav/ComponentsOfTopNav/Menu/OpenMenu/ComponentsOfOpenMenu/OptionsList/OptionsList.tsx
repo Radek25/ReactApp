@@ -9,7 +9,6 @@ import Publications from '../../../../../../../icons/publications.png';
 import People from '../../../../../../../icons/people.png';
 import Entities from '../../../../../../../icons/entities2.png';
 import Administration from '../../../../../../../icons/administration.png';
-import Corporate from '../../../../../../../icons/entities.png';
 import { Link } from 'react-router-dom';
 
 import { WorkspacesArray } from './../../../../../../RightContent/HomeWebside/Workspaces/Slider/Slider';
