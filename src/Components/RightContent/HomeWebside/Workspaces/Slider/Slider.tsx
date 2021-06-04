@@ -5,30 +5,12 @@ import {SliderWrapper} from './SliderStyled';
 import {TileWrapper} from './SliderStyled';
 import {Tile} from './SliderStyled';
 
-//Icon Import
-import BackgroundWritePerson from '../../../../../icons/writeperson2.jpg';
-import BackgroundConferenceRoom from '../../../../../icons/conference-room.jpg';
-import BackgroundBuilding from '../../../../../icons/building.jpg';
-import BackgroundHandShake from '../../../../../icons/handshake.jpg';
-import BackgroundLibrary from '../../../../../icons/library.jpg';
-import Dot from '../../../../../icons/circle-solid.png';
-import FileSignature from '../../../../../icons/file-signature.png';
-import Entities from '../../../../../icons/entities3.png';
-import Book from '../../../../../icons/book.png';
-import Person from '../../../../../icons/person.png';
-import Publication from '../../../../../icons/publications.png';
+//Icons Import
 import People from '../../../../../icons/user-friends.png';
+import Dot from '../../../../../icons/circle-solid.png';
 
-export let WorkspacesArray = [
-    {Id: 1, BackgroundImg : BackgroundWritePerson, MainIcon : FileSignature, TitleOfTile: 'Client contract', Description : 'Contract', UpdateNumber : '2'},
-    {Id: 2, BackgroundImg : BackgroundWritePerson, MainIcon : FileSignature, TitleOfTile: 'Supplier contract', Description : 'Contract', UpdateNumber : '4'},
-    {Id: 3, BackgroundImg : BackgroundConferenceRoom, MainIcon : Entities, TitleOfTile: 'Corporate', Description : 'Corporate', UpdateNumber : '3'},
-    {Id: 4, BackgroundImg : BackgroundLibrary, MainIcon : Book, TitleOfTile: 'Group norms', Description : 'Norms', UpdateNumber : '6'},
-    {Id: 5, BackgroundImg : BackgroundHandShake, MainIcon : Person, TitleOfTile: 'Customers', Description : 'Customers', UpdateNumber : '1'},
-    {Id: 6, BackgroundImg : BackgroundLibrary, MainIcon : Publication, TitleOfTile: 'Documents', Description : 'Documents', UpdateNumber : '2'},
-    {Id: 7, BackgroundImg : BackgroundBuilding, MainIcon : Entities, TitleOfTile: 'Institutions', Description : 'Institutions', UpdateNumber : '2'},
-    {Id: 8, BackgroundImg : BackgroundConferenceRoom, MainIcon : Person, TitleOfTile: 'Business meeting', Description : 'Meeting', UpdateNumber : '3'}
-];
+import {WorkspacesArray} from './../../../../MainPage/MainPage';
+
 
 export const WorkspacesSlider: FC = () =>{
 

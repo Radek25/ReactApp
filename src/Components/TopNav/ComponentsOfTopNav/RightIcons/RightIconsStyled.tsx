@@ -2,15 +2,16 @@ import styled from 'styled-components';
 import {Colors} from '../../../../StyledHelpers/Colors'
 
 export const RightIconsWrapper = styled.div`
-    width: 120px;
+    max-width: 12%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    right: 15px;
+    right: 20px;
     .right-icons-house, .right-icons-message, .right-icons-bell{
         width: 35px;
         height: 35px;
+        margin: 0 5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,18 +22,17 @@ export const RightIconsWrapper = styled.div`
         background-color: ${Colors.lightgrey};
     }
     .right-icons-message::after, .right-icons-bell::after{
-        content: '3';
-        width: 15px;
-        height: 10px;
+        content: '1';
+        width: 18px;
+        height: 13px;
         position: absolute;
-        background-color: ${Colors.lightblue};
         top: 0;
-        right: 0;
+        right: -5px;
         border-radius: 10px;
-        font-size: 8px;
-        font-family: 'Roboto', sans-serif;
-        color: ${Colors.white};
+        font-size: 10px;
         text-align: center;
+        background-color: ${Colors.lightblue};
+        color:  ${Colors.white};
     }
     img{
         width: 20px;

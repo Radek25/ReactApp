@@ -14,9 +14,9 @@ interface IPostData{
 export const LastPublication: FC<IPostData> = (props) =>{
     return(
         <LastPublicationWrapper>
-            <img className = 'writing-person' src = {props.post.picturePost.url}/>
-            <div className = 'content-of-publication'>
-                <p className = 'note-content'>{(props.post.body).charAt(0).toUpperCase() + props.post.body.slice(1, 130)} . . .</p>
+            <img className = 'main-photo-of-single-piblication' src = {props.post.picturePost.url}/>
+            <div className='content-of-single-publication'>
+                <p>{(props.post.body).charAt(0).toUpperCase() + props.post.body.slice(1, 130)} . . .</p>
                 <DatePhotoName post = {props.post}/>
             </div>
         </LastPublicationWrapper>

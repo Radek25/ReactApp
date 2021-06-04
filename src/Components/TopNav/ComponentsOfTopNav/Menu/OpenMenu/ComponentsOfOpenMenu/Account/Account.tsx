@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import { Link } from 'react-router-dom';
 
 //Data Import
 import { useSelector } from "react-redux";
@@ -11,7 +12,6 @@ import {AccountWrapper} from '../Account/AccountStyled';
 //Icon Import
 import Privacy from '../../../../../../../icons/privacy.png';
 import Settings from '../../../../../../../icons/settings.png';
-import { Link } from 'react-router-dom';
 
 export const Account: FC = () =>{
     const { CurrentUser } = useSelector<IState, IDataFromAPI>((globalState) => ({
@@ -19,26 +19,22 @@ export const Account: FC = () =>{
       }));
     return(
         <AccountWrapper>
-            <ul>
-                <li className='title-of-list'>Account</li>
-                <ul>
-                    <li className='micro-profile'>
-                        <img src={CurrentUser?.photo?.url}/>
-                        <div>
-                            <p className='name'>{CurrentUser?.name}</p>
-                            <Link to='/profile'><p className='see-profile'>See profile</p></Link>
-                        </div>
-                    </li>
-                    <li>
-                        <img src={Privacy}/>
-                        <p>Privacy</p>
-                    </li>
-                    <li>
-                        <img src={Settings}/>
-                        <p>Settings</p>
-                    </li>
-                </ul>
-            </ul>
+            <h5>Account</h5>
+            <div className='user-profile-in-open-menu'>
+                <img src={CurrentUser?.photo?.url}/>
+                <div className='name-of-user'>
+                    <p>{CurrentUser?.name}</p>
+                    <p>See profile</p>
+                </div>
+            </div>
+            <div className='options-of-profile-in-open-menu'>
+                <img src={Privacy}/>
+                <p>Privacy</p>
+            </div>
+            <div className='options-of-profile-in-open-menu'>
+                <img src={Settings}/>
+                <p>Settings</p>
+            </div>
         </AccountWrapper>
     );
 };

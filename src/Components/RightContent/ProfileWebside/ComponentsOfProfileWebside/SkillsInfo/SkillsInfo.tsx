@@ -31,19 +31,16 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
 
     return(
         <SkillsInfoWrapper>
-            <img className = 'edit-pen' src = {(isEdit == false? Pen : Check)} 
-                onClick={() => {showEdit(isEdit == false ? isEdit = true : isEdit = false)}}>
-            </img>
+            <img className = 'edit-pen' src = {(isEdit == false? Pen : Check)} onClick={() => {showEdit(isEdit!)}}/>
             <div className = 'expertise'>
                 <h2>Expertise</h2>
-                {isEdit == false?
-                <p>{expertiseValue}</p>:
+                {isEdit == false? <p>{expertiseValue}</p>: 
                 <select onChange = {e => setExpertiseValue(e.target.value)}>
                     {ExpertiseArray.map(ExpertiseArray => <option>{ExpertiseArray}</option>)}
                 </select>
                 }
-                </div>
-                <div className = 'specialties'>
+            </div>
+            <div className = 'specialties'>
                 <h2>Specialities</h2>
                 {isEdit == false?
                 <div>
@@ -60,8 +57,8 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
                     </select>
                 </div>
                 }
-                </div>
-                <div className = 'admission-to-practice-law'>
+            </div>
+            <div className = 'admission-to-practice-law'>
                 <h2>Admission to practice law</h2>
                 {isEdit == false?
                 <div>
@@ -78,16 +75,15 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
                     </select>
                 </div>
                 }
-                </div>
-                <div className = 'countries'>
+            </div>
+            <div className = 'countries'>
                 <h2>Countries</h2>
-                {isEdit == false?
-                <p>{countryValue}</p>:
+                {isEdit == false? <p>{countryValue}</p>:
                 <select onChange = {e => setCountryValue(e.target.value)}>
                     {CountrysArray.map(CountrysArray => <option>{CountrysArray}</option>)}
                 </select>
                 }
-                </div>
+            </div>
         </SkillsInfoWrapper>
     )
 }

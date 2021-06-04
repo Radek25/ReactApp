@@ -6,18 +6,19 @@ import Pagination from '@material-ui/lab/Pagination';
 
 //Data Import
 import { useSelector } from "react-redux";
-import { IState } from "../../../../tools/reducers";
-import { IDataFromAPI } from '../../../../tools/reducers/DataFromAPIReducers';
+import { IState } from "../../../tools/reducers";
+import { IDataFromAPI } from '../../../tools/reducers/DataFromAPIReducers';
 
 //Icon Styled
-import Signal from '../../../../icons/signal.png';
+import Signal from './../../../icons/signal.png';
 
 //Styled Import
 import {ResumeYourWorkWrapper} from './ResumeYourWorkStyled';
 
 //ComponentImport
-import {Comment} from '../../../Common/Comment/Comment'
-import { FilterInput } from '../../../Common/FilterInput/FilterInput';
+import {Comment} from '../Comment/Comment'
+import { FilterInput } from '../FilterInput/FilterInput';
+import { ExtraFilters } from './WorkspacesWebsideExtraFilters/ExtraFilters';
 
 //Pagination Styles
 const useStyles = makeStyles((theme) =>
@@ -30,8 +31,11 @@ const useStyles = makeStyles((theme) =>
   }),
 );
 
+interface IViewChanges{
+  flag: boolean;
+}
 
-export const ResumeYourWork: FC = () =>{
+export const ResumeYourWork: FC<IViewChanges> = (props) =>{
 
   const { CurrentComment } = useSelector<IState, IDataFromAPI>((globalState) => ({
     ...globalState.DataFromAPI,
@@ -50,6 +54,9 @@ export const ResumeYourWork: FC = () =>{
 
   const oneUser = comentsOfOneUser?.filter(comentsOfOneUser => comentsOfOneUser.name.toLowerCase().includes(text.toLowerCase())).slice((page*10+page-10), (page*10+page));
  
+  const mapAllComents = allComents?.map(comment => <Comment comment = {comment}/>);
+  const mapOneUserComents = oneUser?.map(comment => <Comment comment = {comment}/>);
+
   let sizeOfPagination: number = 10;
   if (value == 'all' && CurrentComment) {
     sizeOfPagination = CurrentComment?.length/10;
@@ -61,7 +68,7 @@ export const ResumeYourWork: FC = () =>{
     return(
         <ResumeYourWorkWrapper>
             <div className = 'top-of-resume-your-work'>
-                <p className = 'title-of-component'>Resume your work</p>
+                <h2>{props.flag == false? 'Resume your work' : 'Lastest updates'}</h2>
                 <div className = 'top-of-resume-your-work-right-side'>
                   <FilterInput addText = {addText}/>
                   <img src = {Signal}/>
@@ -71,12 +78,8 @@ export const ResumeYourWork: FC = () =>{
                   </select>
                 </div>
             </div>
-            {
-            (value == 'all')? 
-              (allComents?.map(comment => <Comment comment = {comment}/>)) 
-              :
-              (oneUser?.map(comment => <Comment comment = {comment}/>))
-            }   
+            {props.flag == false? null : <ExtraFilters/>}
+            {(value == 'all')? mapAllComents : mapOneUserComents}   
             {
               (value == 'all' && allComents?.length != undefined && allComents.length < 1)?
               (

@@ -3,21 +3,19 @@ import {Colors} from '../../../../../StyledHelpers/Colors';
 
 export const LastPublicationWrapper = styled.div`
     width: 100%;
-    height: 70px;
+    height: 65px;
+    margin: 10px 0;
     display: flex;
     align-items: center;
-    .writing-person{
-        width: 60px;
-        height: 60px;
-        margin-right: 5px;
+    .main-photo-of-single-piblication{
+        width: 65px;
+        height: 65px;
     }
-    .content-of-publication{
+    .content-of-single-publication{
         width: 90%;
-        height: 75px;
+        height: 65px;
         padding: 5px;
-    }
-    .note-content{
-        font-weight: 600;
         font-size: 14px;
+        font-weight: 600;
     }
 `;

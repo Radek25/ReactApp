@@ -1,25 +1,23 @@
 import styled from 'styled-components';
-
-import Arrow from '../../../../icons/arrow-down-blue.png';
-import { Colors } from './../../../../StyledHelpers/Colors';
+import Arrow from './../../../icons/arrow-down-blue.png'
+import { Colors } from '../../../StyledHelpers/Colors';
 
 
 export const ResumeYourWorkWrapper = styled.div`
     width: 100%;
     height: auto;
-    font-family: 'Roboto', sans-serif;
     .top-of-resume-your-work{
         width: 100%;
         height: 35px;
-        /* background-color: green; */
         margin-bottom: 10px;
         display: flex;
         align-items: center;
         position: relative;
-        p{
-            font-size: 20px;
-            margin-left: 15px;
+        h2{
+            margin-left: 20px;
+            font-size: 17px;
             font-weight: 600;
+            color: ${Colors.black};
         }
     }
     .top-of-resume-your-work-right-side{
@@ -69,7 +67,7 @@ export const ResumeYourWorkWrapper = styled.div`
     #no-results{
         flex-wrap: wrap;
         p{
-        width:100%;
+        width: 100%;
         margin: 50px auto;
         font-size: 20px;
         text-align: center;

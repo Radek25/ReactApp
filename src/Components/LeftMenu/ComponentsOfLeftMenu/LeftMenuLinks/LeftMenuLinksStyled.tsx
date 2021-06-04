@@ -4,20 +4,19 @@ import {Colors} from '../../../../StyledHelpers/Colors';
 export const LinksWrapper = styled.div`
 width: 100%;
 height: 60%;
-.left-menu-publication-ecosystem-entites{
+div{
     display: flex;
     justify-content: left;
     align-items: center;
     width: 65%;
     margin: 16px auto; 
     img{
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
     p{
         font-size: 13px;
-        margin-left: 15px;
-        font-family: 'Roboto', sans-serif;
+        margin-left: 10px;
         font-weight: 600;
     }
 }

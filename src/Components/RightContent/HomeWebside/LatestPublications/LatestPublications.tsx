@@ -7,7 +7,6 @@ import { IDataFromAPI } from '../../../../tools/reducers/DataFromAPIReducers';
 
 //Styled Import
 import {LatestPublicationsWrapper} from './LatestPublicationsStyled';
-import {AllLastPublication} from './LatestPublicationsStyled';
 
 //Components Import
 import {LastPublication} from './LastPublication/LastPublication';
@@ -21,11 +20,11 @@ export const LatestPublications: FC = () =>{
     return(
         <LatestPublicationsWrapper>
             {CurrentPost?.slice(0, 1)?.map(post =><MainPublication post = {post}/>)}
-            <AllLastPublication>
-                <p className = 'title-of-publications'>Latest publications</p>
+            <div className='right-side-of-lastes-publication-module'>
+                <h2>Latest publications</h2>
                 {CurrentPost?.slice(1, 4).map(post =><LastPublication post = {post}/>)}
-                <p className = 'see-more-subtitle'>See more publications</p>
-            </AllLastPublication>
+                <p className='latest-publications-subtitle-link'>See more publications</p>
+            </div>
         </LatestPublicationsWrapper>
     );
 };

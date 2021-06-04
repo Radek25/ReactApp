@@ -12,19 +12,19 @@ interface Property{
 
 export const Option: FC<Property> = (props) => {
 
-    let SelectorOptions: string[] = ['Company', 'Status', 'Contains', 'Ends before', 'Is', 'In'];
+    const selectorOptions: string[] = ['Company', 'Status', 'Contains', 'Ends before', 'Is', 'In'];
 
     return(
         <OptionWrapper>
-           {props.property.map(arr =>
+           {props.property.map(property =>
                 <div className='option'>
                     <img src={Cross}/>
-                    <p>{arr}</p>
+                    <p>{property}</p>
                     <select>
-                        {SelectorOptions.map(options => <option>{options}</option>)}
+                        {selectorOptions.map(options => <option>{options}</option>)}
                     </select>
                     <select>
-                        {SelectorOptions.map(options => <option>{options}</option>)}
+                        {selectorOptions.map(options => <option>{options}</option>)}
                     </select>
                     <input type='text' placeholder='Type...'/>
                 </div>

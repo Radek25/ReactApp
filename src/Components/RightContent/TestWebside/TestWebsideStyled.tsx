@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const TestWrapper = styled.div`
 width: 90%;
-height: 400px;
+height: 92vh;
 background-color: blue;
 color: red;
 font-size: 80px;

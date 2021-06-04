@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Colors} from '../../../../StyledHelpers/Colors';
+import {Colors} from '../../../../../StyledHelpers/Colors';
 
 export const ProposalsWrapper = styled.div`
     width: 90%;

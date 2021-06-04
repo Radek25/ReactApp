@@ -1,34 +1,34 @@
 import styled from 'styled-components';
-import {Colors} from '../../../../../StyledHelpers/Colors';
+import { Colors } from '../../../../../StyledHelpers/Colors';
 
-export const ClosedMenuWrapper = styled.div`
-    width: 16%;
-    height: 100%;
-    margin: 0 5px;
+interface ISizeStyles{
+    isMenuOpen: boolean;
+}
+
+export const ClosedMenuWrapper = styled.div<ISizeStyles>`
+    width: 17%;
+    height: 70%;
+    margin: 0 20px;
     display: flex;
     align-items: center;
     position: relative;
-    .closed-menu-icon-house, .closed-menu-icon-arrow{
-        margin: 0 10px;
-    }
-    .closed-menu-icon-house{
-        width: 18px;
-        height: 18px;
-    }
-    .closed-menu-icon-arrow, .closed-menu-icon-cross{
-        width: 8px;
-        height: 7px;
-        position: absolute;
-        right: 0;
-    }
-    .closed-menu-icon-cross{
-        width: 15px;
-        height: 15px;
-        right: 7px;
-    }
-    p{
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-    }
+    padding: 0 5px;
+    border: 1px solid ${Colors.lightgrey};
+   .icon-of-menu-option{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+   }
+   p{
+       font-size: 14px;
+       font-weight: 600;
+       cursor: default;
+   }
+   .close-or-open-icon{
+       width: ${props => (props.isMenuOpen == false)? '10px' : '20px'};
+       height: ${props => (props.isMenuOpen == false)? '8px' : '20px'};
+       position: absolute;
+       right: ${props => (props.isMenuOpen == false)? '15px' : '10px'};
+       cursor: pointer;
+   }
 `;

@@ -22,10 +22,8 @@ export const Person: FC = () => {
     <PersonWrapper>
       <Link to ='/profile'>
       <img src={!CurrentUser? UnknownUser : CurrentUser.photo?.url}></img>
-      <p className="name-and-surname">
-        {!CurrentUser ? "No user" : CurrentUser.name}
-      </p>
-      <p className="job-title">{CurrentUser?.company.name}</p>
+      <p>{(!CurrentUser)? 'No user' : CurrentUser.name}</p>
+      <p>{CurrentUser?.company.name}</p>
       </Link>
     </PersonWrapper>
   );

@@ -6,7 +6,6 @@ export const YourLinksWrapper = styled.div`
     height: 12%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     margin: 8px auto 5px auto;
     position: relative;
     div{
@@ -14,25 +13,26 @@ export const YourLinksWrapper = styled.div`
         display: flex;
         justify-content: left;
         align-items: center;
-        margin: 2px auto;
-    }
-    p{
-        padding: 5px;
-        font-size: 13px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-    }
-    .right-side-icons{
-        width: 24px;
-        height: 20px;
-        position: absolute;
-        right: 0px;
-        padding: 4px;
-        border: 1.5px solid ${Colors.grey};
-        border-radius: 5px;
-    }
-    img{
-        width: 15px;
-        height: 15px;
+        margin: 3px auto;
+        cursor: default;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        p{
+            padding: 5px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .right-side-icons{
+            width: 28px;
+            height: 24px;
+            position: absolute;
+            right: 0px;
+            padding: 4px 6px;
+            border: 1px solid ${Colors.grey};
+            border-radius: 5px;
+            cursor: pointer;
+        }
     }
 `;

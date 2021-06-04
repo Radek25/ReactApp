@@ -6,7 +6,7 @@ export const SliderWrapper = styled(Slider)`
     width: 95%;
     position: absolute;
     button, button:focus, button:hover{
-        background-color:grey;
+        background-color: ${Colors.grey};
         border-radius: 50px;
     }
 `;
@@ -33,7 +33,6 @@ export const Tile = styled.div`
         position: absolute;
         z-index: -1;
     }
-    //Title and Title of Tail
     .icon-and-title-of-tile{
         display: flex;
         align-items: center;
@@ -53,7 +52,6 @@ export const Tile = styled.div`
         margin: 0;
         padding: 5px;
     }
-    //Description of tile
     .description-to-tile{
         width: 80%;
         height: 20px;

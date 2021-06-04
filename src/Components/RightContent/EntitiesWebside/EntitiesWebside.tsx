@@ -73,8 +73,8 @@ export const Entities: FC = () => {
                     <div onClick={() => setValueOfView(true)} id='button-first'><img src={isMosaic==true? MosaicBlue : MosaicGrey}/> Mosaic</div>
                     <div onClick={() => setValueOfView(false)} id='button-second'><img src={isMosaic==true? ListGrey : ListBlue}/>List</div>
                 </div>
-            <OptionPanel addText={addText} setFilter={setFilter} setSort={setSort} setFullScreen={setFullScreen}/>
-            {isFilterOpen == true? <FilterPanel/> : null}
+              <OptionPanel addText={addText} setFilter={setFilter} setSort={setSort} setFullScreen={setFullScreen}/>
+              {isFilterOpen == true? <FilterPanel/> : null}
             </div>
             {(sortArray.length == 0 || noSortArray?.length == 0)? <div>No results!</div>: (isSort == false? noSortArray : sortArray)}
             <div id = 'pagination-wrapper' className = {classes.root}>

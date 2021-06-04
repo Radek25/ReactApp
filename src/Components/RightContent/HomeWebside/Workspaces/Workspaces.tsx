@@ -9,7 +9,7 @@ import {WorkspacesSlider} from './Slider/Slider';
 export const Workspaces: FC = () =>{
     return(
         <WorkspacesWrapper>
-            <p>Workspaces</p>
+            <h2>Workspaces</h2>
             <WorkspacesSlider/>
         </WorkspacesWrapper>
     );

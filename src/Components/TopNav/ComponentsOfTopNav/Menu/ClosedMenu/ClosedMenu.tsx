@@ -1,33 +1,26 @@
-import React, {FC} from 'react';
-import UseState, { useState } from 'react';
+import React, {FC, useState} from 'react';
 
 //Styled Import
 import {ClosedMenuWrapper} from '../ClosedMenu/ClosedMenuStyled';
 
-//Icons Import
-import HouseIcon from '../../../../../icons/house2.png';
-import ArrowDownIcon from '../../../../../icons/arrow-down.png';
-import Cross from '../../../../../icons/cross.png';
-
 //Components Import
 import {OpenMenu} from '../OpenMenu/OpenMenu';
 
+//Icons Import
+import HouseIcon from '../../../../../icons/house2.png';
+import ArrowDownIcon from '../../../../../icons/arrow-down.png';
+import CloseCross from '../../../../../icons/cross.png';
+
 export const ClosedMenu: FC = () =>{
     
-    let [IsMenuOpen, ChangeState] = useState(false);
-    let [openMenuIcon , ChangeOpenMenuIcon] = useState(ArrowDownIcon);
-    let [ClassName, ChangeClassName] = useState('closed-menu-icon-arrow');
+    const [isMenuOpen, changeStateOfMenu] = useState(false);
+
     return(
-        <ClosedMenuWrapper>
-            <img className="closed-menu-icon-house" src={HouseIcon}></img>
+        <ClosedMenuWrapper isMenuOpen={isMenuOpen}>
+            <img className='icon-of-menu-option' src={HouseIcon}/>
             <p>Home</p>
-            <img onClick={()=> 
-            {ChangeState(IsMenuOpen == true ? IsMenuOpen = false : IsMenuOpen = true); 
-             ChangeOpenMenuIcon(IsMenuOpen == true ? openMenuIcon = Cross : openMenuIcon = ArrowDownIcon);
-             ChangeClassName(IsMenuOpen == true ? ClassName = 'closed-menu-icon-cross' : ClassName = 'closed-menu-icon-arrow');
-            }} 
-            className = {ClassName} src={openMenuIcon}></img>
-            {IsMenuOpen == true ? <OpenMenu/> : null}
+            <img onClick={() => changeStateOfMenu(!isMenuOpen)} className='close-or-open-icon' src={isMenuOpen == false? ArrowDownIcon : CloseCross}/>
+            {isMenuOpen == true ? <OpenMenu/> : null}
         </ClosedMenuWrapper>
     );
 };

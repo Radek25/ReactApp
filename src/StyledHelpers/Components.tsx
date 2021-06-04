@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
     a, u {
         text-decoration: none;
         cursor: pointer;

@@ -10,10 +10,8 @@ export const EntitiesWrapper = styled.div<BoolenOfEntity>`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-family: 'Roboto', sans-serif;
     padding: 10px;
-    width: 100%;
-    height: 100%;
+    margin-bottom: 10px;
     position: ${props => (props.fullScreen == true? 'absolute' : 'none')};
     z-index: ${props => (props.fullScreen == true? '2' : 'auto')};
     top: ${props => (props.fullScreen == true? '0' : 'auto')};

@@ -7,22 +7,38 @@ export const OpenMenuWrapper = styled.div`
         box-sizing: border-box;
         padding: 0;
     }
+    width: 100.5%;
     position: absolute;
-    top: 40px;
-    left: 5px;
-    width: 230px;
-    background-color: ${Colors.white};
-    z-index: 10;
-    border: 1px solid ${Colors.lightgrey};
-`;
-export const FilterField = styled.div`
-    width: 100%;
+    top: 27px;
+    left: -1px;
+    z-index: 1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 2px 0 5px;
+    border: 1px solid ${Colors.lightgrey};
+    background-color: ${Colors.white};
     input{
+        width: 80%;
+        height: 22px;
+        margin: 10px 0;
+        padding-left: 5px;
         border: 1px solid ${Colors.lightgrey};
         border-radius: 5px;
-        padding: 5px;
+        outline: none;
+    }
+    .logout-field{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        img{
+            width: 20px;
+            height: 16px;
+        }
+        p{
+            padding-left: 12px;
+            font-size: 14px;
+            color: ${Colors.grey};
+        }
     }
 `;
