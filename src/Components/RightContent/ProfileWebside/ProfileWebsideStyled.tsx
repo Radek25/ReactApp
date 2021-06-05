@@ -18,5 +18,6 @@ export const ProfileWebsideWrapper = styled.div`
         position: absolute;
         top: 10px;
         right: 10px;
+        cursor: pointer;
     }
 `;

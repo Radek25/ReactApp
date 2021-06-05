@@ -20,5 +20,6 @@ export const StartWorkWrapper = styled.div`
     span{
         position: absolute;
         right: 15px;
+        cursor: pointer;
     }
 `;

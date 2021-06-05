@@ -12,10 +12,10 @@ export const EntitiesWrapper = styled.div<BoolenOfEntity>`
     flex-wrap: wrap;
     padding: 10px;
     margin-bottom: 10px;
-    position: ${props => (props.fullScreen == true? 'absolute' : 'none')};
-    z-index: ${props => (props.fullScreen == true? '2' : 'auto')};
-    top: ${props => (props.fullScreen == true? '0' : 'auto')};
-    left:${props => (props.fullScreen == true? '0' : 'auto')};
+    position: ${props => (props.fullScreen === true? 'absolute' : 'none')};
+    z-index: ${props => (props.fullScreen === true? '2' : 'auto')};
+    top: ${props => (props.fullScreen === true? '0' : 'auto')};
+    left:${props => (props.fullScreen === true? '0' : 'auto')};
     background-color: ${Colors.white}; 
     .top{
         width: 95%;
@@ -55,16 +55,16 @@ export const EntitiesWrapper = styled.div<BoolenOfEntity>`
                 width: 90px;
                 right: 60px;
                 border-radius: 10px 0 0  10px;
-                color: ${props => (props.value == true? `${Colors.NameAndSurname}` : `${Colors.grey}`)};
-                background-color: ${props => (props.value == true? `${Colors.BackgroundToProfilSkills}` : `${Colors.white}`)};
+                color: ${props => (props.value === true? `${Colors.NameAndSurname}` : `${Colors.grey}`)};
+                background-color: ${props => (props.value === true? `${Colors.BackgroundToProfilSkills}` : `${Colors.white}`)};
             }
             #button-second{
                 width: 60px;
                 right: 0;
                 border-left: none;
                 border-radius: 0 10px 10px  0;
-                color: ${props => (props.value == true? `${Colors.grey}` : `${Colors.NameAndSurname}`)};
-                background-color: ${props => (props.value == true? `${Colors.white}` : `${Colors.BackgroundToProfilSkills}`)};
+                color: ${props => (props.value === true? `${Colors.grey}` : `${Colors.NameAndSurname}`)};
+                background-color: ${props => (props.value === true? `${Colors.white}` : `${Colors.BackgroundToProfilSkills}`)};
             }
         }
     }

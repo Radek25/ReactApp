@@ -39,12 +39,12 @@ export const Comment: FC<IComment> = (props) =>{
             <p>{body.charAt(0).toUpperCase() + body.slice(1)}</p>
             <div className = 'subtitles'>
                 <p>{props.comment.UserComment.company.name}</p>
-                <img src = {Dot}/>
+                <img src = {Dot} alt='.'/>
                 <div>
-                    <img src ={CommentSubtitleArray[index].Icon}/>
+                    <img src ={CommentSubtitleArray[index].Icon} alt='icon'/>
                     <p>{CommentSubtitleArray[index].Title}</p>
                 </div>
-                <img src = {Dot}/>
+                <img src = {Dot} alt='.'/>
                 <p>Updated {index} days ago by {props.comment.UserComment.name}</p>
             </div>
         </CommentWrapper>

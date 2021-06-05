@@ -41,21 +41,21 @@ export const OptionPanel: FC<IsFilterOpen> = (props) => {
                 <option>All</option>
                 <option>All2</option>
             </select>
-            <img className='arrow-down' src={ArrowDown}/>
-            <img className='three-dots' src={ThreeDots}/>
+            <img className='arrow-down' src={ArrowDown} alt='IconArrowDown'/>
+            <img className='three-dots' onClick={() => alert('No more options!')} src={ThreeDots} alt='IconThreeDots'/>
             <div className = 'filter-options'>
-                <div onClick={() => setSortClick(!isSortClick)} className='sort-option'><img src={SortArrow}/>Sort</div>
-                <div onClick={() => setFilterOpen(!isFilterOpen)} className='filter-option'><img src={Filter}/>Filters</div>
+                <div onClick={() => setSortClick(!isSortClick)} className='sort-option'><img src={SortArrow} alt='IconSort'/>Sort</div>
+                <div onClick={() => setFilterOpen(!isFilterOpen)} className='filter-option'><img src={Filter} alt='IconFilter'/>Filters</div>
             </div>
-            <img onClick={() => setFullScreenOpen(!isFullScreenOpen)} className='view-option' src={isFullScreenOpen == false? Max : Min}/>
-            <div onClick={() => copyToClipboard(window.location.href)} className='share-option'><img src={Share}/>Share</div>
+            <img onClick={() => setFullScreenOpen(!isFullScreenOpen)} className='view-option' src={isFullScreenOpen === false? Max : Min} alt='IconMaxorMin'/>
+            <div onClick={() => copyToClipboard(window.location.href)} className='share-option'><img src={Share} alt='IconShare'/>Share</div>
             <div className='right-side-of-optional-panel'>
                 <FilterInput addText = {addText}/>
                 <select>
                     <option>Followed</option>
                     <option>Followed2</option>
                 </select>
-                <img className='arrow-down2' src={ArrowDown}/>
+                <img className='arrow-down2' src={ArrowDown} alt='IconArrowDown'/>
             </div>
         </OptionPanelWrapper>
     );

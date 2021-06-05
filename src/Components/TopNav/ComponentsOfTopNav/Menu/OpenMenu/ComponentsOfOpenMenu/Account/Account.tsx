@@ -21,20 +21,26 @@ export const Account: FC = () =>{
         <AccountWrapper>
             <h5>Account</h5>
             <div className='user-profile-in-open-menu'>
-                <img src={CurrentUser?.photo?.url}/>
+                <img src={CurrentUser?.photo?.url} alt='UserPhoto'/>
                 <div className='name-of-user'>
                     <p>{CurrentUser?.name}</p>
+                    <Link to = {'/profile'}>
                     <p>See profile</p>
+                    </Link>
                 </div>
             </div>
+            <Link to = {'/test'}>
             <div className='options-of-profile-in-open-menu'>
-                <img src={Privacy}/>
+                <img src={Privacy} alt='IconPrivacy'/>
                 <p>Privacy</p>
             </div>
+            </Link>
+            <Link to = {'/test'}>
             <div className='options-of-profile-in-open-menu'>
-                <img src={Settings}/>
+                <img src={Settings} alt='IconSettings'/>
                 <p>Settings</p>
             </div>
+            </Link>
         </AccountWrapper>
     );
 };

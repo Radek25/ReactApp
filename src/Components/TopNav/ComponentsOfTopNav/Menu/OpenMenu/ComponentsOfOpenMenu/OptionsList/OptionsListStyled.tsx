@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Colors} from '../../../../../../../StyledHelpers/Colors';
 
-export const ListWrapper = styled.div`
+export const OptionListWrapper = styled.div`
     width: 95%;
     min-height: 100px;
     max-height: 270px;

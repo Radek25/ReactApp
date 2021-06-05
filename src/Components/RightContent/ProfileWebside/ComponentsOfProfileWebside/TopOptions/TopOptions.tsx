@@ -1,4 +1,5 @@
 import React, {FC} from 'react'
+import { Link } from 'react-router-dom';
 
 //Styled Import
 import { TopOptionsWrapper } from './TopOptionsStyled';
@@ -17,8 +18,8 @@ export const TopOptions: FC = () => {
     ];
     return(
         <TopOptionsWrapper>
-            <ul>{TopOptionsArray.map(TopOptionsArray =><li><img src={TopOptionsArray.Icon}/> <p>{TopOptionsArray.Title}</p></li>)}</ul>
-            <img className= 'close-cross-icon' src= {Cross}/>
+            <ul>{TopOptionsArray.map(TopOptionsArray =><Link to = {'/test'}><li><img src={TopOptionsArray.Icon} alt='IconOfOtion'/> <p>{TopOptionsArray.Title}</p></li></Link>)}</ul>
+            <Link to = {'/test'}><img className= 'close-cross-icon' src= {Cross} alt='IconDeleteCross'/></Link>
         </TopOptionsWrapper>
     )
 }

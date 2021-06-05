@@ -1,8 +1,8 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
 
 //Styled Import
-import {ListWrapper} from '../OptionsList/OptionsListStyled';
+import {OptionListWrapper} from '../OptionsList/OptionsListStyled';
 
 //Arrays Import
 import {WorkspacesArray} from './../../../../../../MainPage/MainPage'
@@ -17,10 +17,10 @@ export const OptionsList: FC<ITextFromInput> = (props) =>{
 
     const dropDownMenuPlatformArray = PlatformArray.filter(Platform => Platform.Decsription.toLowerCase().includes(props.text.toLowerCase()));
     const dropDownMenuWorkspacesArray = WorkspacesArray.filter(Workspaces => Workspaces.TitleOfTile.toLowerCase().includes(props.text.toLowerCase()));
-    const mapPlatfromArray = dropDownMenuPlatformArray.map(Platform => <Link to = {Platform.Link}><li key={Platform.Index}><img src={Platform.Icon}/><p>{Platform.Decsription}</p></li></Link>);
-    const mapWorkspacesArray = dropDownMenuWorkspacesArray.map(Workspaces => <Link to = {`/workspace/${Workspaces.Id}`}><li key={Workspaces.Id}><img src={Workspaces.MainIcon}/><p>{Workspaces.TitleOfTile}</p></li></Link>)
+    const mapPlatfromArray = dropDownMenuPlatformArray.map(Platform => <Link to = {Platform.Link}><li key={Platform.Index}><img src={Platform.Icon} alt='IconOfPlatformOption'/><p>{Platform.Decsription}</p></li></Link>);
+    const mapWorkspacesArray = dropDownMenuWorkspacesArray.map(Workspaces => <Link to = {`/workspace/${Workspaces.Id}`}><li key={Workspaces.Id}><img src={Workspaces.MainIcon} alt='IconOfWorkspacesOption'/><p>{Workspaces.TitleOfTile}</p></li></Link>)
     return(
-        <ListWrapper>
+        <OptionListWrapper>
             <ul>
                 <li className='title-of-list'>Platform</li>
                 <ul>
@@ -31,6 +31,6 @@ export const OptionsList: FC<ITextFromInput> = (props) =>{
                     {dropDownMenuWorkspacesArray.length > 0? mapWorkspacesArray : <li>No results!</li>}
                 </ul>
             </ul>
-    </ListWrapper>
+        </OptionListWrapper>
     );
 };

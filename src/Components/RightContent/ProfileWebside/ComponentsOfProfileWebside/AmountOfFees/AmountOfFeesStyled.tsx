@@ -37,9 +37,22 @@ export const AmountOfFeesWrapper = styled.div`
         font-weight: 600;
     }
     input, select{
+        width: 140px;
+        margin: 0 5px;
         border: 1px solid ${Colors.lightgrey};
         outline: none;
         border-radius: 5px;
         padding-left: 5px;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        input{
+            width: 80px;
+            text-align: center;
+        }
+        select{
+            width: 70px;
+        }
     }
 `;

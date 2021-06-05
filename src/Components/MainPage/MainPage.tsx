@@ -2,17 +2,17 @@ import React, { FC, useEffect } from "react";
 
 import {useDispatch} from 'react-redux';
  
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 
 import { TopNav } from "../TopNav/TopNav";
 import { LeftMenu } from "../LeftMenu/LeftMenu";
 import { RightContent } from '../RightContent/RightContent'
-import { Wrapper } from "../../StyledHelpers/Components";
-import { Test } from "../RightContent/TestWebside/TestWebside";
+import { Wrapper } from './MainPageStyled';
+import { Test } from '../RightContent/TestWebside/TestWebside';
 import { Entities } from '../RightContent/EntitiesWebside/EntitiesWebside'
 import { HomeWebside } from '../RightContent/HomeWebside/HomeWebside';
-import { ProfileWebside } from "../RightContent/ProfileWebside/ProfileWebside";
+import { ProfileWebside } from '../RightContent/ProfileWebside/ProfileWebside';
 import { WorkspacesWebside } from './../RightContent/WorkspacesWebside/WorkspacesWebside';
 
 import { getUser } from '../../tools/actions/actionsTypes/userActions';
@@ -41,9 +41,9 @@ import BackgroundLibrary from '../../icons/library.jpg';
 export const PlatformArray = [
 {Index: 1, Icon: HomeIcon, Decsription: 'Home', Link: '/home'},
 {Index: 2, Icon: PublicationsIcon, Decsription: 'Publication', Link: '/publications'},
-{Index: 3, Icon: PeopleIcon, Decsription: 'People', Link: '/people'},
+{Index: 3, Icon: PeopleIcon, Decsription: 'People', Link: '/test'},
 {Index: 4, Icon: EntitiesIcon, Decsription: 'Entities', Link: '/entities'},
-{Index: 5, Icon: AdministrationIcon, Decsription: 'Administration', Link: '/administration'}];
+{Index: 5, Icon: AdministrationIcon, Decsription: 'Administration', Link: '/test'}];
 
 export const WorkspacesArray = [
 {Id: 1, BackgroundImg : BackgroundWritePerson, MainIcon : FileSignatureIcon, TitleOfTile: 'Client contract', Description : 'Contract', UpdateNumber : '2'},
@@ -69,6 +69,7 @@ const MainPage: FC = () => {
     dispatch<GetPosts>(getPost());
     dispatch<GetComment>(getComment());
     dispatch<GetPhoto>(getPhoto());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -84,6 +85,7 @@ const MainPage: FC = () => {
             <Route path='/ecosystem' component={Test} />
             <Route path='/entities' component={Entities}/>
             <Route path='/workspace/:id' component={WorkspacesWebside}/>
+            <Route path='/test' component={Test}/>
           </Switch>
         </RightContent>
       </Wrapper>

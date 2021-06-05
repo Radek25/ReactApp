@@ -33,6 +33,8 @@ export const ProposalsWrapper = styled.div`
         font-size: 16px;
     }
     input, select{
+        width: 140px;
+        margin: 0 5px;
         border: 1px solid ${Colors.lightgrey};
         outline: none;
         border-radius: 5px;

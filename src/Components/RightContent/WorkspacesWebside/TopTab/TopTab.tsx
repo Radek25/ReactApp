@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import { Link } from 'react-router-dom';
 
 //Styled Import 
 import { TopTabWrapper } from './TopTabStyled';
@@ -21,9 +22,9 @@ export const TopTab: FC<IWorkspacesArray> = (props) => {
     return(
         <TopTabWrapper photo={props.workspacesArray?.BackgroundImg}>
             <div className='bottom-module'>
-                <img src={props.workspacesArray?.MainIcon}/>
+                <img src={props.workspacesArray?.MainIcon} alt='IconMain'/>
                 <div className='title-of-workspace'>
-                    <img src={Cog}/>
+                    <Link to = {'/test'}><img src={Cog} alt='IconCog'/></Link>
                     <h1>{props.workspacesArray?.TitleOfTile}</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sapiente. Consectetur quasi praesentium laborum cum dolores est dolorum, perferendis, vero repudiandae, tempore totam. Ad accusamus laborum sint. Aliquid, id alias.</p>
                 </div>

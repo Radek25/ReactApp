@@ -15,12 +15,12 @@ interface UserData{
 export const CorrespondantProfile: FC<UserData> = (props) => {
     return(
         <CorrespondantProfileWrapper>
-                <img src={props.userPhoto}/>
+                <img src={props.userPhoto} alt='UserPhoto'/>
                 <p>{props.userName}</p>
                 <div className = 'option-of-correspondents'>
-                    <img src={Message}/>
+                    <img src={Message} alt='IconMessage'/>
                     <p>Message</p>
-                    <img src={Person}/>
+                    <img src={Person} alt='IconPerson'/>
                     <p>Profile</p>
                 </div>
         </CorrespondantProfileWrapper>

@@ -31,10 +31,10 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
 
     return(
         <SkillsInfoWrapper>
-            <img className = 'edit-pen' src = {(isEdit == false? Pen : Check)} onClick={() => {showEdit(isEdit!)}}/>
+            <img className = 'edit-pen' src = {(isEdit === false? Pen : Check)} onClick={() => {showEdit(!isEdit)}} alt='IconEditPen'/>
             <div className = 'expertise'>
                 <h2>Expertise</h2>
-                {isEdit == false? <p>{expertiseValue}</p>: 
+                {isEdit === false? <p>{expertiseValue}</p>: 
                 <select onChange = {e => setExpertiseValue(e.target.value)}>
                     {ExpertiseArray.map(ExpertiseArray => <option>{ExpertiseArray}</option>)}
                 </select>
@@ -42,7 +42,7 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
             </div>
             <div className = 'specialties'>
                 <h2>Specialities</h2>
-                {isEdit == false?
+                {isEdit === false?
                 <div>
                     <p>{specialtiesValue}</p>
                     <p>{specialtiesValue2}</p>
@@ -60,7 +60,7 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
             </div>
             <div className = 'admission-to-practice-law'>
                 <h2>Admission to practice law</h2>
-                {isEdit == false?
+                {isEdit === false?
                 <div>
                     <p>{admissionValue}</p>
                     <p>{admissionValue2}</p>
@@ -78,7 +78,7 @@ export const SkillsInfo: FC<ValueEdit> = (props) => {
             </div>
             <div className = 'countries'>
                 <h2>Countries</h2>
-                {isEdit == false? <p>{countryValue}</p>:
+                {isEdit === false? <p>{countryValue}</p>:
                 <select onChange = {e => setCountryValue(e.target.value)}>
                     {CountrysArray.map(CountrysArray => <option>{CountrysArray}</option>)}
                 </select>

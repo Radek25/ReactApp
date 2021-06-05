@@ -11,8 +11,8 @@ interface Iicons{
 export const StartWorkTile: FC<Iicons> = (props) => {
     return(
         <StartWorkTileWrapper>
-            <img className='background-img' src={props.icon}/>
-            <img src={props.icon}/>
+            <img className='background-img' src={props.icon} alt='BackgroundImage'/>
+            <img src={props.icon} alt='IconOfTile'/>
             <h4>{props.title}</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae error repellat incidunt.</p>
         </StartWorkTileWrapper>

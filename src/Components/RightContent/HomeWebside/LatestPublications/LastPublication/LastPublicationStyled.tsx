@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Colors} from '../../../../../StyledHelpers/Colors';
 
 export const LastPublicationWrapper = styled.div`
     width: 100%;

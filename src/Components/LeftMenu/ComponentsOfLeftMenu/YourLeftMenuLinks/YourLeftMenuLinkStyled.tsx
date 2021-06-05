@@ -7,7 +7,6 @@ export const YourLinksWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: 8px auto 5px auto;
-    position: relative;
     div{
         width: 100%;
         display: flex;
@@ -15,6 +14,7 @@ export const YourLinksWrapper = styled.div`
         align-items: center;
         margin: 3px auto;
         cursor: default;
+        position: relative;
         img{
             width: 20px;
             height: 20px;
@@ -28,7 +28,8 @@ export const YourLinksWrapper = styled.div`
             width: 28px;
             height: 24px;
             position: absolute;
-            right: 0px;
+            top: 0;
+            right: 0;
             padding: 4px 6px;
             border: 1px solid ${Colors.grey};
             border-radius: 5px;

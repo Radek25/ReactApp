@@ -17,10 +17,10 @@ export const ClosedMenu: FC = () =>{
 
     return(
         <ClosedMenuWrapper isMenuOpen={isMenuOpen}>
-            <img className='icon-of-menu-option' src={HouseIcon}/>
+            <img className='icon-of-menu-option' src={HouseIcon} alt='IconOfDropDownMenu'/>
             <p>Home</p>
-            <img onClick={() => changeStateOfMenu(!isMenuOpen)} className='close-or-open-icon' src={isMenuOpen == false? ArrowDownIcon : CloseCross}/>
-            {isMenuOpen == true ? <OpenMenu/> : null}
+            <img onClick={() => changeStateOfMenu(!isMenuOpen)} className='close-or-open-icon' src={isMenuOpen === false? ArrowDownIcon : CloseCross} alt='IconOpenOrCloseDropDownMenu'/>
+            {isMenuOpen === true ? <OpenMenu/> : null}
         </ClosedMenuWrapper>
     );
 };

@@ -25,10 +25,10 @@ export const ClosedMenuWrapper = styled.div<ISizeStyles>`
        cursor: default;
    }
    .close-or-open-icon{
-       width: ${props => (props.isMenuOpen == false)? '10px' : '20px'};
-       height: ${props => (props.isMenuOpen == false)? '8px' : '20px'};
+       width: ${props => (props.isMenuOpen === false)? '10px' : '20px'};
+       height: ${props => (props.isMenuOpen === false)? '8px' : '20px'};
        position: absolute;
-       right: ${props => (props.isMenuOpen == false)? '15px' : '10px'};
+       right: ${props => (props.isMenuOpen === false)? '15px' : '10px'};
        cursor: pointer;
    }
 `;

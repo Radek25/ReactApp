@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import {useParams} from "react-router-dom";
 
 //Styled Import
@@ -16,7 +16,7 @@ export const WorkspacesWebside: FC = () => {
 
     const {id} = useParams<{id: string}>();
 
-    const workspaces = WorkspacesArray.find(Workspaces => Workspaces.Id == parseInt(id))
+    const workspaces = WorkspacesArray.find(Workspaces => Workspaces.Id === parseInt(id))
 
     const a :boolean = true;
   

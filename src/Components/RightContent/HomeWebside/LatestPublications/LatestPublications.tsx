@@ -1,4 +1,5 @@
 import React, {FC} from 'react'
+import { Link } from 'react-router-dom';
 
 //Data Import
 import { useSelector } from "react-redux";
@@ -23,7 +24,7 @@ export const LatestPublications: FC = () =>{
             <div className='right-side-of-lastes-publication-module'>
                 <h2>Latest publications</h2>
                 {CurrentPost?.slice(1, 4).map(post =><LastPublication post = {post}/>)}
-                <p className='latest-publications-subtitle-link'>See more publications</p>
+                <Link to = {'/test'}><p className='latest-publications-subtitle-link'>See more publications</p></Link>
             </div>
         </LatestPublicationsWrapper>
     );

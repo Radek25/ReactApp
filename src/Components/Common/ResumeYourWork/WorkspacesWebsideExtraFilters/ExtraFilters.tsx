@@ -23,9 +23,8 @@ export const ExtraFilters: FC = () => {
      
     return(
        <ExtraFiltersWrapper>
-           {FiltersArray.map(FiltersData => 
-           <div>
-               {FiltersData.Icon != undefined? <img src={FiltersData.Icon}/> : null}{FiltersData.Title}
+           {FiltersArray.map(FiltersData =>
+           <div key={FiltersData.Title}>{FiltersData.Icon !== undefined? <img src={FiltersData.Icon} alt='IconOfOption'/> : null}{FiltersData.Title}
            </div>)}
        </ExtraFiltersWrapper> 
     );

@@ -40,7 +40,6 @@ export const ResumeYourWorkWrapper = styled.div`
             margin: 0 10px;
         }
         select{
-            padding-right: 20px;
             background-image: url(${Arrow});
             background-position: right -7px;
             background-size: 20px 20px;
@@ -51,6 +50,7 @@ export const ResumeYourWorkWrapper = styled.div`
             outline: none;
             color: ${Colors.NameAndSurname};
             font-weight: 550;
+            padding: 0 5px;
         }
         select:focus{
             outline: none;

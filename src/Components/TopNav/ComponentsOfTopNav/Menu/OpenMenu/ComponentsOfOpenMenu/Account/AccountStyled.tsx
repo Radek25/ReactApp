@@ -24,6 +24,7 @@ export const AccountWrapper = styled.div`
         font-size: 11px;
         padding-top: 2px;
         color: ${Colors.NameAndSurname};
+        cursor: pointer;
     }
     }
     .options-of-profile-in-open-menu{
@@ -34,6 +35,9 @@ export const AccountWrapper = styled.div`
             width: 20px;
             height: 18px;
             margin-right: 10px;
+        }
+        p{
+            cursor: pointer;
         }
     }
 `;

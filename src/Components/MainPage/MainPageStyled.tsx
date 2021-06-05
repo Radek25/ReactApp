@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import {Colors} from './Colors';
+import {Colors} from '../../StyledHelpers/Colors';
 
 export const Wrapper = styled.div`
     width: 100%;
+    min-height: 100%;
     margin-bottom: 0;
     background-color:#f5f7f9;
     display: flex;

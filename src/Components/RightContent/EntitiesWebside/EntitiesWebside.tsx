@@ -1,4 +1,5 @@
 import React, {FC, useState} from 'react';
+import { Link } from 'react-router-dom';
 
 //Data Import
 import { useSelector } from "react-redux";
@@ -69,14 +70,14 @@ export const Entities: FC = () => {
             <div className = 'top'>
                 <div className='title-and-view-option'>
                     <h1>Entities</h1>
-                    <img src={Setting}/>
-                    <div onClick={() => setValueOfView(true)} id='button-first'><img src={isMosaic==true? MosaicBlue : MosaicGrey}/> Mosaic</div>
-                    <div onClick={() => setValueOfView(false)} id='button-second'><img src={isMosaic==true? ListGrey : ListBlue}/>List</div>
+                    <Link to = {'/test'}><img src={Setting} alt='IconSetting'/></Link>
+                    <div onClick={() => setValueOfView(true)} id='button-first'><img src={isMosaic===true? MosaicBlue : MosaicGrey} alt='IconMosaic'/> Mosaic</div>
+                    <div onClick={() => setValueOfView(false)} id='button-second'><img src={isMosaic===true? ListGrey : ListBlue} alt='IconList'/>List</div>
                 </div>
               <OptionPanel addText={addText} setFilter={setFilter} setSort={setSort} setFullScreen={setFullScreen}/>
-              {isFilterOpen == true? <FilterPanel/> : null}
+              {isFilterOpen === true? <FilterPanel/> : null}
             </div>
-            {(sortArray.length == 0 || noSortArray?.length == 0)? <div>No results!</div>: (isSort == false? noSortArray : sortArray)}
+            {(sortArray.length === 0 || noSortArray?.length === 0)? <div>No results!</div>: (isSort === false? noSortArray : sortArray)}
             <div id = 'pagination-wrapper' className = {classes.root}>
                 <Pagination count={sizeOfPagination} page={page} onChange={handleChange}/>
             </div>

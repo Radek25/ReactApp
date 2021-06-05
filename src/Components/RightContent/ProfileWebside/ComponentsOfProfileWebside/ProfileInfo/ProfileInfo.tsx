@@ -27,16 +27,15 @@ export const ProfileInfo: FC = () => {
     let [isEdit, showEdit] = useState(false);
     return(
         <ProfileInfoWrapper>
-            <img className = 'edit-pen' src = {(isEdit == false? Pen : Check)} 
+            <img className = 'edit-pen' src = {(isEdit === false? Pen : Check)} 
                 onClick={()=> 
-            {showEdit(isEdit == false ? isEdit = true : isEdit = false)}}>
-            </img>
+            {showEdit(isEdit === false ? isEdit = true : isEdit = false)}} alt='IconEditPen'/>
             <div className = 'photo-of-profile'>
-                <img src={CurrentUser?.photo?.url}/>
+                <img src={CurrentUser?.photo?.url} alt='UserPhoto'/>
                 <p>See profil</p>
             </div>
             <div className = 'info-of-userProfil'>
-                {isEdit == false? (
+                {isEdit === false? (
                     <ul className = 'list-of-data'>
                         <li>{name}</li>
                         <li>{company}</li>
@@ -54,7 +53,7 @@ export const ProfileInfo: FC = () => {
                 }
             </div>
             <div className = 'email-and-phone'>
-                {isEdit == false? (
+                {isEdit === false? (
                     <ul className = 'list-of-data-email-phone'>
                         <li>{CurrentUser?.email}</li>
                         <li>+33 (0)6 12 34 56 78</li>

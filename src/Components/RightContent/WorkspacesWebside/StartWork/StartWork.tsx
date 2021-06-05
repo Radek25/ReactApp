@@ -19,8 +19,8 @@ export const StartWork: FC = () => {
         {Icon: Calendar, Title: 'Define the calendar'}];
     return(
         <StartWorkWrapper>
-        <p>Start working on corporate matters<span>Hide</span></p>
-        {TilesArray.map(TilesData => <StartWorkTile icon={TilesData.Icon} title={TilesData.Title}/>)}
+        <p>Start working on corporate matters<span onClick={() => alert('You are not authorized for this feature')}>Hide</span></p>
+        {TilesArray.map(TilesData => <StartWorkTile key={TilesData.Title} icon={TilesData.Icon} title={TilesData.Title}/>)}
         </StartWorkWrapper>
     );
 };    

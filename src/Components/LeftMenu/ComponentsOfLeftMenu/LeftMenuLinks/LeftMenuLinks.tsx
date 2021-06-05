@@ -14,19 +14,19 @@ export const LeftMenuLinks: FC = () => {
         <LinksWrapper>
         <Link to = {'/publications'}>
             <div>
-                <img src={Publications}></img>
+                <img src={Publications} alt='IconOfPublication'/>
                 <p>Publications</p>
             </div>
         </Link>
         <Link to = {'/ecosystem'}>
             <div>
-                <img src={EcoSystem}></img>
+                <img src={EcoSystem} alt='IconOfEcoSystem'/>
                 <p>EcoSystem</p>
             </div>
         </Link>
         <Link to = {'/entities'}>
             <div>
-                <img src={Entities}></img>
+                <img src={Entities} alt='IconOfEntities'/>
                 <p>Entities</p>
             </div>
         </Link>

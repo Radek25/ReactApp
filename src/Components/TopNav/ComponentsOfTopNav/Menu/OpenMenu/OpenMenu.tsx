@@ -21,7 +21,7 @@ export const OpenMenu: FC = (props) =>{
             <OptionsList text={text}/>
             <Account/>
             <div className='logout-field'>
-                <img src={LogoutIcon}/>
+                <img src={LogoutIcon} alt='IconLogout'/>
                 <p>Logout</p>
             </div>
         </OpenMenuWrapper>

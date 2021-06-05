@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 
 //Styled Import
 import { OptionWrapper } from './OptionStyled';
@@ -18,7 +18,7 @@ export const Option: FC<Property> = (props) => {
         <OptionWrapper>
            {props.property.map(property =>
                 <div className='option'>
-                    <img src={Cross}/>
+                    <img src={Cross} alt='IconDelete'/>
                     <p>{property}</p>
                     <select>
                         {selectorOptions.map(options => <option>{options}</option>)}

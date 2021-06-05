@@ -1,7 +1,6 @@
-import React, {FC, useEffect} from 'react'
+import React, {FC} from 'react'
+import { Link } from 'react-router-dom';
 
-//Icons Import
-import WritingPerson from '../../../../../icons/writeperson.jpg';
 //Styled Import
 import {LastPublicationWrapper} from './LastPublicationStyled';
 //Components Import
@@ -14,9 +13,9 @@ interface IPostData{
 export const LastPublication: FC<IPostData> = (props) =>{
     return(
         <LastPublicationWrapper>
-            <img className = 'main-photo-of-single-piblication' src = {props.post.picturePost.url}/>
+            <img className = 'main-photo-of-single-piblication' src = {props.post.picturePost.url} alt='PublicationPhoto'/>
             <div className='content-of-single-publication'>
-                <p>{(props.post.body).charAt(0).toUpperCase() + props.post.body.slice(1, 130)} . . .</p>
+                <Link to = {'/test'}><p>{(props.post.body).charAt(0).toUpperCase() + props.post.body.slice(1, 130)} . . .</p></Link>
                 <DatePhotoName post = {props.post}/>
             </div>
         </LastPublicationWrapper>

@@ -1,6 +1,3 @@
-import React, {FC} from 'react';
-import { TopOptions } from './../Components/RightContent/ProfileWebside/ComponentsOfProfileWebside/TopOptions/TopOptions';
-
 export const Colors = {
     background: '#f5f7f9',
     white: '#FFFFFF',

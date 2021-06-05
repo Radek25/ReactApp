@@ -34,6 +34,7 @@ export const InternalReviewsWrapper = styled.div`
         font-weight: 600;
     }
     input, select{
+        width: 140px;
         border: 1px solid ${Colors.lightgrey};
         outline: none;
         border-radius: 5px;

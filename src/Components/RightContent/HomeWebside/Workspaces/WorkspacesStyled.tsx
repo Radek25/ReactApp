@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Colors} from '../../../../StyledHelpers/Colors';
 
 export const WorkspacesWrapper = styled.div`
     width: 105%;

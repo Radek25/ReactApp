@@ -23,7 +23,7 @@ export const getCurrentPost = async (UserId: number, PostCount: number) =>{
     return fetch(`https://jsonplaceholder.typicode.com/posts`)
         .then(response => response.json())
         .then((post: ISinglePost[]) => {
-            return post.filter(post => post.id == 11 || post.id == 21 || post.id == 31 || post.id == 41)
+            return post.filter(post => post.id === 11 || post.id === 21 || post.id === 31 || post.id === 41)
         })
 }
 

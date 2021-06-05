@@ -14,11 +14,11 @@ import SearchIcon from './../../icons/search.png';
 export const TopNav: FC = () => {
     return(
         <TopNavWrapper>
-            <img className='logo' src={LogoImg}/>
+            <img className='logo' src={LogoImg} alt='LogoImage'/>
             <ClosedMenu/>
             <div className='search-top-nav'>
                 <input type='text' placeholder="Search Legalcluster"/>
-                <img src={SearchIcon}/>
+                <img src={SearchIcon} alt='IconSearch'/>
             </div>
             <RightIcons/>
         </TopNavWrapper>

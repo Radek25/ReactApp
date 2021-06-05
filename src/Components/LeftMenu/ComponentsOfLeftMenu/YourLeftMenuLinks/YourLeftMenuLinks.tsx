@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import { Link } from 'react-router-dom';
 
 //Icon Import
 import Network from '../../../../icons/network.png';
@@ -13,14 +14,14 @@ export const YourLeftMenuLinks: FC = () => {
     return(
         <YourLinksWrapper>
             <div>
-                <img src={Network}></img>
+                <img src={Network} alt='IconNetwork'/>
                 <p>Your Network</p>
-                <img className='right-side-icons' src={PlusUser}></img>
+                <Link to = {'/test'}><img className='right-side-icons' src={PlusUser} alt='IconPlusUser'/></Link>
             </div>
             <div>
-                <img src={Publications}></img>
+                <img src={Publications} alt='IconPublications'/>
                 <p>Your Publications</p>
-                <img className='right-side-icons' src={Plus}></img>
+                <Link to = {'/test'}><img className='right-side-icons' src={Plus} alt='IconPlus'/></Link>
             </div>
         </YourLinksWrapper>
     );

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import {Colors} from '../../../../../StyledHelpers/Colors';
-
-//Icons Import
-import Buildings from '../../../../../icons/buildings.jpg';
 interface IBackGroundPhoto{
     photo: string | undefined;
 }
