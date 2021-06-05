@@ -79,7 +79,7 @@ const MainPage: FC = () => {
         <LeftMenu />
         <RightContent>
           <Switch>
-            <Route path='/home' component={HomeWebside}/>
+            <Route exact path='/home' component={HomeWebside}/>
             <Route path='/profile' component={ProfileWebside}/>
             <Route path='/publications' component={Test}/>
             <Route path='/ecosystem' component={Test} />

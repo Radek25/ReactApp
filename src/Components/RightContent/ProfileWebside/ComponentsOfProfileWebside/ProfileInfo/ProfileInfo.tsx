@@ -11,18 +11,25 @@ import { ProfileInfoWrapper } from './ProfileInfoStyled';
 //Icon Import
 import Pen from '../../../../../icons/pen.png';
 import Check from '../../../../../icons/check.png';
+import { useEffect } from 'react';
 
 export const ProfileInfo: FC = () => {
 
     const { CurrentUser } = useSelector<IState, IDataFromAPI>((globalState) => ({
         ...globalState.DataFromAPI,
     }));
-    
+
     //Data hooks
-    let [name, setName] = useState(CurrentUser?.name);
-    let [company, setCompany] = useState(CurrentUser?.company.name);
-    let [city, setCity] = useState(CurrentUser?.address.city);
+    let [name, setName] = useState('No name');
+    let [company, setCompany] = useState('No company');
+    let [city, setCity] = useState('No city');
     let [partner, setPartner] = useState('Partner');
+
+    useEffect(() => {
+        setName(CurrentUser?.name? CurrentUser.name : 'No name');
+        setCompany(CurrentUser?.company.name? CurrentUser?.company.name : 'No company');
+        setCity(CurrentUser?.address.city? CurrentUser?.address.city : 'No city')
+    });
       
     let [isEdit, showEdit] = useState(false);
     return(
