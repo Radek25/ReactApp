@@ -17,14 +17,12 @@ export const WorkspacesWebside: FC = () => {
     const {id} = useParams<{id: string}>();
 
     const workspaces = WorkspacesArray.find(Workspaces => Workspaces.Id === parseInt(id))
-
-    const a :boolean = true;
   
     return(
        <WorkspacesWebsideWrapper>
            <TopTab workspacesArray={workspaces}/>
            <StartWork/>
-           <ResumeYourWork flag={a}/>
+           <ResumeYourWork flag={true}/>
        </WorkspacesWebsideWrapper> 
     );
 };

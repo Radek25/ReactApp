@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useState, useEffect} from 'react';
 
 //Styled Import
 import { OptionPanelWrapper } from './OptionPanelStyled';
@@ -23,13 +23,16 @@ interface IsFilterOpen{
 export const OptionPanel: FC<IsFilterOpen> = (props) => {
 
     const [text, addText] = useState('');
-    props.addText(text);
     const [isFilterOpen, setFilterOpen] = useState(false);
-    props.setFilter(isFilterOpen);
     const [isSortClick, setSortClick] = useState(false)
-    props.setSort(isSortClick);
     const [isFullScreenOpen, setFullScreenOpen] = useState(false)
-    props.setFullScreen(isFullScreenOpen);
+
+    useEffect(() => {
+        props.addText(text);
+        props.setFilter(isFilterOpen);
+        props.setSort(isSortClick);
+        props.setFullScreen(isFullScreenOpen);
+    });
 
     function copyToClipboard(link: string) {
         navigator.clipboard.writeText(link);

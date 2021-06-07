@@ -20,16 +20,16 @@ export const ProfileInfo: FC = () => {
     }));
 
     //Data hooks
-    let [name, setName] = useState('No name');
-    let [company, setCompany] = useState('No company');
-    let [city, setCity] = useState('No city');
+    let [name, setName] = useState<string | undefined>('No user');
+    let [company, setCompany] = useState<string | undefined>('No company');
+    let [city, setCity] = useState<string | undefined>('No city');
     let [partner, setPartner] = useState('Partner');
 
     useEffect(() => {
-        setName(CurrentUser?.name? CurrentUser.name : 'No name');
-        setCompany(CurrentUser?.company.name? CurrentUser?.company.name : 'No company');
-        setCity(CurrentUser?.address.city? CurrentUser?.address.city : 'No city')
-    });
+        setName(CurrentUser?.name,);
+        setCompany(CurrentUser?.company.name);
+        setCity(CurrentUser?.address.city)
+    }, [CurrentUser?.name, CurrentUser?.company.name, CurrentUser?.address.city]);
       
     let [isEdit, showEdit] = useState(false);
     return(

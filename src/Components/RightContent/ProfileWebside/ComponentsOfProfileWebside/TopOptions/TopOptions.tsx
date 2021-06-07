@@ -12,13 +12,14 @@ import Cross from '../../../../../icons/cross-profile.png'
 
 export const TopOptions: FC = () => {
     const TopOptionsArray = [
-        {Icon: Message, Title: 'Message'},
-        {Icon: File, Title: 'Create a request'},
-        {Icon: Briefcase, Title: 'Add a cluster'}
+        {Id: 1, Icon: Message, Title: 'Message'},
+        {Id: 2, Icon: File, Title: 'Create a request'},
+        {Id: 3, Icon: Briefcase, Title: 'Add a cluster'}
     ];
+
     return(
         <TopOptionsWrapper>
-            <ul>{TopOptionsArray.map(TopOptionsArray =><Link to = {'/test'}><li><img src={TopOptionsArray.Icon} alt='IconOfOtion'/> <p>{TopOptionsArray.Title}</p></li></Link>)}</ul>
+            <ul>{TopOptionsArray.map(TopOptionsArray =><Link key={TopOptionsArray.Id} to = {'/test'}><li><img src={TopOptionsArray.Icon} alt='IconOfOtion'/> <p>{TopOptionsArray.Title}</p></li></Link>)}</ul>
             <Link to = {'/test'}><img className= 'close-cross-icon' src= {Cross} alt='IconDeleteCross'/></Link>
         </TopOptionsWrapper>
     )

@@ -62,8 +62,8 @@ export const Entities: FC = () => {
        ArrayPhotosAdnsSortTitles.push({Title: allTitles?.[index], Photo: allPhotos?.[index]});
      }
 
-     const noSortArray = CurrentPhoto?.filter(CurrentPhoto => CurrentPhoto.title.toLowerCase().includes(text.toLowerCase())).slice(24*(page-1), 24*page).map(CurrentPhoto => <Entitie title={CurrentPhoto.title} photos={CurrentPhoto.url} sizeOfEntity = {isMosaic}/>);
-     const sortArray = ArrayPhotosAdnsSortTitles?.filter(ArrayPhotosAdnsSortTitles => ArrayPhotosAdnsSortTitles.Title?.toLowerCase().includes(text.toLowerCase())).slice(24*(page-1), 24*page).map(Photo => <Entitie title={Photo.Title} photos={Photo.Photo} sizeOfEntity = {isMosaic}/>);
+     const noSortArray = CurrentPhoto?.filter(CurrentPhoto => CurrentPhoto.title.toLowerCase().includes(text.toLowerCase())).slice(24*(page-1), 24*page).map(CurrentPhoto => <Entitie key={CurrentPhoto.id} title={CurrentPhoto.title} photos={CurrentPhoto.url} sizeOfEntity = {isMosaic}/>);
+     const sortArray = ArrayPhotosAdnsSortTitles?.filter(ArrayPhotosAdnsSortTitles => ArrayPhotosAdnsSortTitles.Title?.toLowerCase().includes(text.toLowerCase())).slice(24*(page-1), 24*page).map(Photo => <Entitie key={Photo.Title} title={Photo.Title} photos={Photo.Photo} sizeOfEntity = {isMosaic}/>);
 
     return(
         <EntitiesWrapper value={isMosaic} fullScreen={isFullScreen}>

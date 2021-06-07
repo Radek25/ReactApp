@@ -24,7 +24,7 @@ export const WorkspacesSlider: FC = () =>{
     return(
         <SliderWrapper {...settings}>
             {WorkspacesArray.map(SliderComponents => 
-            <Link to = {`/workspace/${SliderComponents.Id}`}>
+            <Link to = {`/workspace/${SliderComponents.Id}`} key={SliderComponents.Id}>
             <TileWrapper>
                 <Tile>
                     <img className = 'background-img' src = {SliderComponents.BackgroundImg} alt='BackgroundOfTile'/>   

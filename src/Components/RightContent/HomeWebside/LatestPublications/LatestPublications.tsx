@@ -20,10 +20,10 @@ export const LatestPublications: FC = () =>{
       }));
     return(
         <LatestPublicationsWrapper>
-            {CurrentPost?.slice(0, 1)?.map(post =><MainPublication post = {post}/>)}
+            {CurrentPost?.slice(0, 1)?.map(post =><MainPublication key={post.id} post = {post}/>)}
             <div className='right-side-of-lastes-publication-module'>
                 <h2>Latest publications</h2>
-                {CurrentPost?.slice(1, 4).map(post =><LastPublication post = {post}/>)}
+                {CurrentPost?.slice(1, 4).map(post =><LastPublication key={post.id} post = {post}/>)}
                 <Link to = {'/test'}><p className='latest-publications-subtitle-link'>See more publications</p></Link>
             </div>
         </LatestPublicationsWrapper>

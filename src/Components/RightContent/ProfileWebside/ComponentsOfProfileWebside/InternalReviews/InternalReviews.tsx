@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 //Styled Import
 import {InternalReviewsWrapper} from './InternalReviewsStyled'
  
-let TitleOfTable = ['Name', 'Entity', 'Location', 'Expertise', 'Date']
+let TitleOfTable = [{Id: 1, Title: 'Name'}, {Id: 2, Title: 'Entity'}, {Id: 3, Title: 'Location'}, {Id: 4, Title: 'Expertise'}, {Id: 5, Title: 'Date'}]
 let CountrysArray = ['Select country', 'Poland', 'Italy', 'Germany', 'USA', 'Spain', 'France'];
 
 interface ValueEdit{
@@ -39,30 +39,34 @@ export const InternalReviews: FC<ValueEdit> = (props) =>{
         <InternalReviewsWrapper>
             <h1>Internal Reviews</h1>
         <table>
-            <tr>
-                {TitleOfTable.map(TitleOfTable => <th>{TitleOfTable}</th>)}
-            </tr>
-            <tr>
-                <td>{props.isOpen === false? nameOne : <input type='text' placeholder={nameOne} onChange={(e)=>setNameOne(e.target.value)}/>}</td>
-                <td>{props.isOpen === false? entityOne : <input type='text' placeholder={entityOne} onChange={(e)=>setEntityOne(e.target.value)}/>}</td>
-                <td>{props.isOpen === false? locationOne : <select onChange = {e => setLocationOne(e.target.value)}>{CountrysArray.map(CountrysArray => <option>{CountrysArray}</option>)}</select>}</td>
-                <td>{props.isOpen === false? expertiseOne : <input type='text' placeholder={expertiseOne} onChange={(e)=>setExpertiseOne('#'+e.target.value)}/>}</td>
-                <td>{props.isOpen === false? dateOne : <input type='date' value={dateOne} onChange={(e)=>setDateOne(e.target.value)}/>}</td>
-            </tr>
-            <tr>
-                <td>{props.isOpen === false? nameTwo : <input type='text' placeholder={nameTwo} onChange={(e)=>setNameTwo(e.target.value)}/>}</td>
-                <td>{props.isOpen === false? entityTwo: <input type='text' placeholder={entityTwo} onChange={(e)=>setEntityTwo(e.target.value)}/>}</td>
-                <td>{props.isOpen === false? locationTwo : <select onChange = {e => setLocationTwo(e.target.value)}>{CountrysArray.map(CountrysArray => <option>{CountrysArray}</option>)}</select>}</td>
-                <td>{props.isOpen === false? expertiseTwo : <input type='text' placeholder={expertiseTwo} onChange={(e)=>setExpertiseTwo('#'+e.target.value)}/>}</td>
-                <td>{props.isOpen === false? dateTwo : <input type='date' value={dateTwo} onChange={(e)=>setDateTwo(e.target.value)}/>}</td>
-            </tr>
-            <tr>
-                <td>{props.isOpen === false? nameThree : <input type='text' placeholder={nameThree} onChange={(e)=>setNameThree(e.target.value)}/>}</td>
-                <td>{props.isOpen === false? entityThree : <input type='text' placeholder={entityThree} onChange={(e)=>setEntityThree(e.target.value)}/>}</td>
-                <td>{props.isOpen === false? locationThree : <select onChange = {e => setLocationThree(e.target.value)}>{CountrysArray.map(CountrysArray => <option>{CountrysArray}</option>)}</select>}</td>
-                <td>{props.isOpen === false? expertiseThree : <input type='text' placeholder={expertiseOne} onChange={(e)=>setExpertiseThree('#'+e.target.value)}/>}</td>
-                <td>{props.isOpen === false? dateThree : <input type='date' value={dateThree} onChange={(e)=>setDateThree(e.target.value)}/>}</td>
-            </tr>
+            <thead>
+                <tr>
+                    {TitleOfTable.map(TitleOfTable => <th key={TitleOfTable.Id}>{TitleOfTable.Title}</th>)}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{props.isOpen === false? nameOne : <input type='text' placeholder={nameOne} onChange={(e)=>setNameOne(e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? entityOne : <input type='text' placeholder={entityOne} onChange={(e)=>setEntityOne(e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? locationOne : <select onChange = {e => setLocationOne(e.target.value)}>{CountrysArray.map(CountrysArray => <option key={CountrysArray}>{CountrysArray}</option>)}</select>}</td>
+                    <td>{props.isOpen === false? expertiseOne : <input type='text' placeholder={expertiseOne} onChange={(e)=>setExpertiseOne('#'+e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? dateOne : <input type='date' value={dateOne} onChange={(e)=>setDateOne(e.target.value)}/>}</td>
+                </tr>
+                <tr>
+                    <td>{props.isOpen === false? nameTwo : <input type='text' placeholder={nameTwo} onChange={(e)=>setNameTwo(e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? entityTwo: <input type='text' placeholder={entityTwo} onChange={(e)=>setEntityTwo(e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? locationTwo : <select onChange = {e => setLocationTwo(e.target.value)}>{CountrysArray.map(CountrysArray => <option key={CountrysArray}>{CountrysArray}</option>)}</select>}</td>
+                    <td>{props.isOpen === false? expertiseTwo : <input type='text' placeholder={expertiseTwo} onChange={(e)=>setExpertiseTwo('#'+e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? dateTwo : <input type='date' value={dateTwo} onChange={(e)=>setDateTwo(e.target.value)}/>}</td>
+                </tr>
+                <tr>
+                    <td>{props.isOpen === false? nameThree : <input type='text' placeholder={nameThree} onChange={(e)=>setNameThree(e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? entityThree : <input type='text' placeholder={entityThree} onChange={(e)=>setEntityThree(e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? locationThree : <select onChange = {e => setLocationThree(e.target.value)}>{CountrysArray.map(CountrysArray => <option key={CountrysArray}>{CountrysArray}</option>)}</select>}</td>
+                    <td>{props.isOpen === false? expertiseThree : <input type='text' placeholder={expertiseOne} onChange={(e)=>setExpertiseThree('#'+e.target.value)}/>}</td>
+                    <td>{props.isOpen === false? dateThree : <input type='date' value={dateThree} onChange={(e)=>setDateThree(e.target.value)}/>}</td>
+                </tr>
+            </tbody>
         </table>
         <Link to = {'/test'}><p>See more Reviews</p></Link>
         </InternalReviewsWrapper>

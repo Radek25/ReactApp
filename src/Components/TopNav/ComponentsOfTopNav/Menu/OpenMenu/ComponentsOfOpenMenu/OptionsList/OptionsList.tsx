@@ -17,8 +17,8 @@ export const OptionsList: FC<ITextFromInput> = (props) =>{
 
     const dropDownMenuPlatformArray = PlatformArray.filter(Platform => Platform.Decsription.toLowerCase().includes(props.text.toLowerCase()));
     const dropDownMenuWorkspacesArray = WorkspacesArray.filter(Workspaces => Workspaces.TitleOfTile.toLowerCase().includes(props.text.toLowerCase()));
-    const mapPlatfromArray = dropDownMenuPlatformArray.map(Platform => <Link to = {Platform.Link}><li key={Platform.Index}><img src={Platform.Icon} alt='IconOfPlatformOption'/><p>{Platform.Decsription}</p></li></Link>);
-    const mapWorkspacesArray = dropDownMenuWorkspacesArray.map(Workspaces => <Link to = {`/workspace/${Workspaces.Id}`}><li key={Workspaces.Id}><img src={Workspaces.MainIcon} alt='IconOfWorkspacesOption'/><p>{Workspaces.TitleOfTile}</p></li></Link>)
+    const mapPlatfromArray = dropDownMenuPlatformArray.map(Platform => <Link key={Platform.Index} to = {Platform.Link}><li><img src={Platform.Icon} alt='IconOfPlatformOption'/><p>{Platform.Decsription}</p></li></Link>);
+    const mapWorkspacesArray = dropDownMenuWorkspacesArray.map(Workspaces => <Link key={Workspaces.Id} to = {`/workspace/${Workspaces.Id}`}><li><img src={Workspaces.MainIcon} alt='IconOfWorkspacesOption'/><p>{Workspaces.TitleOfTile}</p></li></Link>)
     return(
         <OptionListWrapper>
             <ul>

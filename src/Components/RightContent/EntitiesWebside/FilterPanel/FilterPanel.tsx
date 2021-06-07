@@ -8,8 +8,8 @@ import { Option } from './Option/Option';
 
 export const FilterPanel: FC = () => {
 
-    let [property, setProperty] = useState<string[]>([]);
-    let [value, setValue] = useState('Where');
+    const [property, setProperty] = useState<string[]>([]);
+    const [value, setValue] = useState('Where');
 
     return(
         <FilterPanelWrapper>

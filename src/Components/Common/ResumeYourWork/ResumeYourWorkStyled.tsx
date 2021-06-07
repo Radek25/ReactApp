@@ -50,7 +50,7 @@ export const ResumeYourWorkWrapper = styled.div`
             outline: none;
             color: ${Colors.NameAndSurname};
             font-weight: 550;
-            padding: 0 5px;
+            padding: 0 20px 0 5px;
         }
         select:focus{
             outline: none;
