@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import { Link } from 'react-router-dom';
 
 //Styled Import
 import {TopNavWrapper} from '../TopNav/TopNavStyled';
@@ -14,7 +15,7 @@ import SearchIcon from './../../icons/search.png';
 export const TopNav: FC = () => {
     return(
         <TopNavWrapper>
-            <img className='logo' src={LogoImg} alt='LogoImage'/>
+            <Link to = {'/'}><img className='logo' src={LogoImg} alt='LogoImage'/></Link>
             <ClosedMenu/>
             <div className='search-top-nav'>
                 <input type='text' placeholder="Search Legalcluster"/>
