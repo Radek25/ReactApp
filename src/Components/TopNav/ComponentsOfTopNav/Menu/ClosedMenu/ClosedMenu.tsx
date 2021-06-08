@@ -31,7 +31,7 @@ export const ClosedMenu: FC = () =>{
             <img className='icon-of-menu-option' src={iconToDisplay? iconToDisplay : Person} alt='IconOfDropDownMenu'/>
             <p>{nameToDisplay? nameToDisplay : 'Profile'}</p>
             <img onClick={() => changeStateOfMenu(!isMenuOpen)} className='close-or-open-icon' src={isMenuOpen === false? ArrowDownIcon : CloseCross} alt='IconOpenOrCloseDropDownMenu'/>
-            {isMenuOpen === true ? <OpenMenu/> : null}
+            {isMenuOpen === true ? <OpenMenu closeDropDownMenu={changeStateOfMenu}/> : null}
         </ClosedMenuWrapper>
     );
 };

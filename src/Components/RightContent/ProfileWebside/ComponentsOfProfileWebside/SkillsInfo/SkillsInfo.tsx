@@ -8,11 +8,11 @@ import Pen from '../../../../../icons/pen.png';
 import Check from '../../../../../icons/check.png';
 import { useEffect } from 'react';
 
-interface ValueEdit{
+interface IValueEdit{
     setEditValue: (isEditOpen: boolean) => void;
 }
 
-export const SkillsInfo: FC<ValueEdit> = (props) => {
+export const SkillsInfo: FC<IValueEdit> = (props) => {
 
 
     let ExpertiseArray = ['Select experience', 'Client service', 'Corporate training', 'Financial analysis', 'Menagement skills', 'Project menagment'];
