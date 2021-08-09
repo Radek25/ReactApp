@@ -14,7 +14,6 @@ import Signal from './../../../icons/signal.png';
 
 //Styled Import
 import {ResumeYourWorkWrapper} from './ResumeYourWorkStyled';
-
 //ComponentImport
 import {Comment} from '../Comment/Comment'
 import { FilterInput } from '../FilterInput/FilterInput';
