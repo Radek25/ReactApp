@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/Radek25/ReactApp/static/js/main.44fad0da.chunk.js",
-    "main.js.map": "/Radek25/ReactApp/static/js/main.44fad0da.chunk.js.map",
-    "runtime-main.js": "/Radek25/ReactApp/static/js/runtime-main.dd86e2c9.js",
-    "runtime-main.js.map": "/Radek25/ReactApp/static/js/runtime-main.dd86e2c9.js.map",
-    "static/js/2.9d58b63a.chunk.js": "/Radek25/ReactApp/static/js/2.9d58b63a.chunk.js",
-    "static/js/2.9d58b63a.chunk.js.map": "/Radek25/ReactApp/static/js/2.9d58b63a.chunk.js.map",
-    "index.html": "/Radek25/ReactApp/index.html",
-    "static/js/2.9d58b63a.chunk.js.LICENSE.txt": "/Radek25/ReactApp/static/js/2.9d58b63a.chunk.js.LICENSE.txt",
-    "static/media/building.74f46a22.jpg": "/Radek25/ReactApp/static/media/building.74f46a22.jpg",
-    "static/media/library.09337e37.jpg": "/Radek25/ReactApp/static/media/library.09337e37.jpg",
-    "static/media/logo.2ce6bed1.png": "/Radek25/ReactApp/static/media/logo.2ce6bed1.png",
-    "static/media/signal.b36fd50a.png": "/Radek25/ReactApp/static/media/signal.b36fd50a.png",
-    "static/media/writeperson2.0e97c381.jpg": "/Radek25/ReactApp/static/media/writeperson2.0e97c381.jpg"
+    "main.js": "/ReactApp/static/js/main.44fad0da.chunk.js",
+    "main.js.map": "/ReactApp/static/js/main.44fad0da.chunk.js.map",
+    "runtime-main.js": "/ReactApp/static/js/runtime-main.86d3e356.js",
+    "runtime-main.js.map": "/ReactApp/static/js/runtime-main.86d3e356.js.map",
+    "static/js/2.a03d7b89.chunk.js": "/ReactApp/static/js/2.a03d7b89.chunk.js",
+    "static/js/2.a03d7b89.chunk.js.map": "/ReactApp/static/js/2.a03d7b89.chunk.js.map",
+    "index.html": "/ReactApp/index.html",
+    "static/js/2.a03d7b89.chunk.js.LICENSE.txt": "/ReactApp/static/js/2.a03d7b89.chunk.js.LICENSE.txt",
+    "static/media/building.74f46a22.jpg": "/ReactApp/static/media/building.74f46a22.jpg",
+    "static/media/library.09337e37.jpg": "/ReactApp/static/media/library.09337e37.jpg",
+    "static/media/logo.2ce6bed1.png": "/ReactApp/static/media/logo.2ce6bed1.png",
+    "static/media/signal.b36fd50a.png": "/ReactApp/static/media/signal.b36fd50a.png",
+    "static/media/writeperson2.0e97c381.jpg": "/ReactApp/static/media/writeperson2.0e97c381.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.dd86e2c9.js",
-    "static/js/2.9d58b63a.chunk.js",
+    "static/js/runtime-main.86d3e356.js",
+    "static/js/2.a03d7b89.chunk.js",
     "static/js/main.44fad0da.chunk.js"
   ]
 }
