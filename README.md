@@ -1,3 +1,8 @@
+# About CorpoAPP
+Podczas czwartego semestru studiów moim zadaniem było stworzenie aplikacji
+do zarządzania korporacją w celu nauki freamwork'a React. 
+Design aplikacji został stworzony i udostępniony przez prowadzącego w formie projektu graficznego. Wykonując ćwiczenie wykorzystywałem framework React, TypeScript oraz bibliotekę Styled-Components. Projekt pokazał mi czym jest React, na czym polega jego budowa i podstawowe działanie. Poznałem takie narzędzia jak Hooki, Routing czy Redux.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
